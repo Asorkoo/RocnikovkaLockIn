@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=20 format=3 uid="uid://dlcylr2m3cmjs"]
 
 [ext_resource type="PackedScene" uid="uid://dtiqtbjua4wjs" path="res://Scenes/player.tscn" id="1_b6fju"]
@@ -35,6 +36,44 @@ region = Rect2(144, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uscyt"]
 atlas = ExtResource("3_6h5vk")
+=======
+[gd_scene load_steps=14 format=3 uid="uid://dlcylr2m3cmjs"]
+
+[ext_resource type="PackedScene" uid="uid://dtiqtbjua4wjs" path="res://Scenes/player.tscn" id="1_b6fju"]
+[ext_resource type="Script" uid="uid://cdcyu1353vbbu" path="res://Scenes/player_movement.gd" id="2_fiftr"]
+[ext_resource type="Texture2D" uid="uid://coadijxt7hwk3" path="res://Assets/dinoCharactersVersion1.1/sheets/DinoSprites - doux.png" id="4_fiftr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiftr"]
+atlas = ExtResource("4_fiftr")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ixah"]
+atlas = ExtResource("4_fiftr")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fmhe"]
+atlas = ExtResource("4_fiftr")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgj8m"]
+atlas = ExtResource("4_fiftr")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h5vk"]
+atlas = ExtResource("4_fiftr")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iton"]
+atlas = ExtResource("4_fiftr")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikfsv"]
+atlas = ExtResource("4_fiftr")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dgvu"]
+atlas = ExtResource("4_fiftr")
+>>>>>>> a888f28 (Test)
 region = Rect2(120, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4xiap"]
@@ -47,10 +86,17 @@ animations = [{
 "texture": SubResource("AtlasTexture_1ixah")
 }, {
 "duration": 1.0,
+<<<<<<< HEAD
 "texture": SubResource("AtlasTexture_rgj8m")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2fmhe")
+=======
+"texture": SubResource("AtlasTexture_2fmhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgj8m")
+>>>>>>> a888f28 (Test)
 }],
 "loop": true,
 "name": &"Idle",
@@ -58,6 +104,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+<<<<<<< HEAD
+=======
+"texture": SubResource("AtlasTexture_6h5vk")
+}, {
+"duration": 1.0,
+>>>>>>> a888f28 (Test)
 "texture": SubResource("AtlasTexture_7iton")
 }, {
 "duration": 1.0,
@@ -65,9 +117,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5dgvu")
+<<<<<<< HEAD
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uscyt")
+=======
+>>>>>>> a888f28 (Test)
 }],
 "loop": true,
 "name": &"Walking",
@@ -78,6 +133,7 @@ animations = [{
 radius = 8.0
 height = 22.0
 
+<<<<<<< HEAD
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rgj8m"]
 radius = 9.0
 height = 24.0
@@ -93,23 +149,34 @@ size = Vector2(225.70857, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikfsv"]
 size = Vector2(48.999992, 26)
 
+=======
+>>>>>>> a888f28 (Test)
 [node name="game_scene" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_b6fju")]
 motion_mode = 1
+<<<<<<< HEAD
 script = ExtResource("2_1ixah")
+=======
+script = ExtResource("2_fiftr")
+>>>>>>> a888f28 (Test)
 
 [node name="sprite" type="AnimatedSprite2D" parent="player"]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_4xiap")
 animation = &"Walking"
 autoplay = "Idle"
+<<<<<<< HEAD
 frame_progress = 0.98493755
+=======
+frame_progress = 0.8977899
+>>>>>>> a888f28 (Test)
 
 [node name="collision" type="CollisionShape2D" parent="player"]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_wywco")
 
+<<<<<<< HEAD
 [node name="Area2D" type="Area2D" parent="player"]
 collision_mask = 2
 
@@ -212,3 +279,8 @@ scale = Vector2(0.5199988, 0.51999915)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
 zoom = Vector2(2, 2)
+=======
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 2)
+zoom = Vector2(4, 4)
+>>>>>>> a888f28 (Test)
