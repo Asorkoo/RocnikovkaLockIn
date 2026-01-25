@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+Dino Characters changes
+- 2017-10-08
+Added a crouch and a walk animation for it.
+=======
+<<<<<<< HEAD
+Dino Characters changes
+- 2017-10-08
+Added a crouch and a walk animation for it.
+=======
+Dino Characters changes
+- 2017-10-08
+Added a crouch and a walk animation for it.
+>>>>>>> a888f28 (Test)
+>>>>>>> e62af7b (cleaning, assety, script na dvere a hrace)

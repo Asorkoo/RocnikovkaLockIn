@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo1f1ntspnmjm"
-path="res://.godot/imported/DinoSprites - tard.png-21ddd9f3b3a01db2e66e71f184b98b6e.ctex"
+uid="uid://cmsuowh6m77gr"
+path="res://.godot/imported/datlos.png-eba479f74df1a49492574b64f08aa5ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/alien/sheets/DinoSprites - tard.png"
-dest_files=["res://.godot/imported/DinoSprites - tard.png-21ddd9f3b3a01db2e66e71f184b98b6e.ctex"]
+source_file="res://Assets/sprites/datlos.png"
+dest_files=["res://.godot/imported/datlos.png-eba479f74df1a49492574b64f08aa5ea.ctex"]
 
 [params]
 
