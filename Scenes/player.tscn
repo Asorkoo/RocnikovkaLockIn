@@ -1,23 +1,24 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtiqtbjua4wjs"]
+[gd_scene load_steps=15 format=3 uid="uid://dtiqtbjua4wjs"]
 
 [ext_resource type="Script" uid="uid://cdcyu1353vbbu" path="res://Scripts/player_movement.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://coadijxt7hwk3" path="res://Assets/sprites/alien/sheets/DinoSprites - doux.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://coadijxt7hwk3" path="res://Assets/sprites/dinoCharactersVersion1.1/sheets/DinoSprites - doux.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cgnxi7rmlitm5" path="res://Assets/sprites/dinoCharactersVersion1.1/sheets/DinoSprites - mort.png" id="2_vgqql"]
 [ext_resource type="PackedScene" uid="uid://bydm7x88l00jq" path="res://interaction_components/interacting_component.tscn" id="3_6t5aa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
-atlas = ExtResource("2_cvnsp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("2_vgqql")
 region = Rect2(0, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
-atlas = ExtResource("2_cvnsp")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
-atlas = ExtResource("2_cvnsp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("2_vgqql")
 region = Rect2(72, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
-atlas = ExtResource("2_cvnsp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+atlas = ExtResource("2_vgqql")
 region = Rect2(48, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
@@ -40,20 +41,20 @@ region = Rect2(144, 0, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6t5aa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vgqql")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_fkybt")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x3wgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gymyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu2lt")
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 4.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -86,6 +87,7 @@ position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"Walking"
 autoplay = "Idle"
+frame_progress = 0.592128
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)

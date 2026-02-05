@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k46bgorqbfta"
-path="res://.godot/imported/shadow_2.png-e1672e41e6bfe0a2c90eb9dcd749b09b.ctex"
+path="res://.godot/imported/shadow_2.png-2b68950a45e8d6c1b6d6d33466d0b549.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/alien/misc/shadow_2.png"
-dest_files=["res://.godot/imported/shadow_2.png-e1672e41e6bfe0a2c90eb9dcd749b09b.ctex"]
+source_file="res://Assets/sprites/dinoCharactersVersion1.1/misc/shadow_2.png"
+dest_files=["res://.godot/imported/shadow_2.png-2b68950a45e8d6c1b6d6d33466d0b549.ctex"]
 
 [params]
 

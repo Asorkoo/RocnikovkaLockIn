@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Ani mi nemluv"
-run/main_scene="uid://ecdj7jmsghys"
+run/main_scene="uid://4vsgtpjvo884"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/borderless=true
+window/stretch/mode="viewport"
 
 [input]
 
@@ -55,4 +62,4 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0.076411046, 0.14226076, 0.060709707, 1)
+environment/defaults/default_clear_color=Color(0.4047625, 0.4047625, 0.4047625, 1)

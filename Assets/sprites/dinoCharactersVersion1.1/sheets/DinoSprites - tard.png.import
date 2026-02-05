@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo1f1ntspnmjm"
-path="res://.godot/imported/DinoSprites - tard.png-21ddd9f3b3a01db2e66e71f184b98b6e.ctex"
+path="res://.godot/imported/DinoSprites - tard.png-a0d5be50aa3b0c058a77eb9d256e8cc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/alien/sheets/DinoSprites - tard.png"
-dest_files=["res://.godot/imported/DinoSprites - tard.png-21ddd9f3b3a01db2e66e71f184b98b6e.ctex"]
+source_file="res://Assets/sprites/dinoCharactersVersion1.1/sheets/DinoSprites - tard.png"
+dest_files=["res://.godot/imported/DinoSprites - tard.png-a0d5be50aa3b0c058a77eb9d256e8cc4.ctex"]
 
 [params]
 

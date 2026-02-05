@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://4vsgtpjvo884"]
+
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="1_28flt"]
+[ext_resource type="Script" uid="uid://db0rg44usfk2" path="res://Scenes/main_menu.gd" id="1_48xlc"]
+[ext_resource type="AudioStream" uid="uid://dc03ql1n6vigi" path="res://Uzi ft. Quavo - Go All Tha Way.mp3" id="3_1ehe0"]
+
+[node name="mainMenu" type="Node2D"]
+position = Vector2(595, 326)
+script = ExtResource("1_48xlc")
+
+[node name="buttonManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="buttonManager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.5
+offset_top = -168.0
+offset_right = 93.5
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_pressed_color = Color(0.44705883, 0.44705883, 0.44705883, 1)
+theme_override_colors/font_hover_color = Color(0.60784316, 0.4392157, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="Options" type="Button" parent="buttonManager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -61.0
+offset_right = 92.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_pressed_color = Color(0.44705883, 0.44705883, 0.44705883, 1)
+theme_override_colors/font_hover_color = Color(0.60784316, 0.4392157, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="Exit" type="Button" parent="buttonManager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.5
+offset_top = 49.0
+offset_right = 93.5
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_pressed_color = Color(0.446777, 0.44677705, 0.44677693, 1)
+theme_override_colors/font_hover_color = Color(0.60623616, 0.43992993, 0.4488892, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[node name="UziFt_QuavoGoAllThaWay" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1ehe0")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="buttonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="buttonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="buttonManager/Exit" to="." method="_on_exit_pressed"]
