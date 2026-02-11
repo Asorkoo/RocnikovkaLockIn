@@ -1,9 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://dtiqtbjua4wjs"]
 
-[ext_resource type="Script" uid="uid://cdcyu1353vbbu" path="res://Scripts/player_movement.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://cdcyu1353vbbu" path="res://player_movement.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://coadijxt7hwk3" path="res://Assets/sprites/dinoCharactersVersion1.1/sheets/DinoSprites - doux.png" id="2_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://cgnxi7rmlitm5" path="res://Assets/sprites/dinoCharactersVersion1.1/sheets/DinoSprites - mort.png" id="2_vgqql"]
-[ext_resource type="PackedScene" uid="uid://bydm7x88l00jq" path="res://interaction_components/interacting_component.tscn" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
 atlas = ExtResource("2_vgqql")
@@ -78,6 +77,8 @@ animations = [{
 radius = 7.0
 height = 20.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
+
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
 
@@ -93,4 +94,7 @@ frame_progress = 0.592128
 position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_v0iea")
 
-[node name="interactingComponent" parent="." instance=ExtResource("3_6t5aa")]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_6t5aa")

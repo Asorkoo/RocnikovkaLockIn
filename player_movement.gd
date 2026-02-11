@@ -1,8 +1,15 @@
 extends CharacterBody2D
-
+#MOVEMENT VARIABLES
+#------------------
 @export var movement_speed: float = 50
 var character_direction : Vector2
 
+#INTERACTION VARIABLES
+#---------------------
+@onready var interact_area = $Area2D
+var interactables = []
+
+#MOVEMENT
 func _physics_process(_delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
 	character_direction.y = Input.get_axis("move_up", "move_down")
@@ -19,3 +26,21 @@ func _physics_process(_delta):
 		if %sprite.animation != "Idle": %sprite.animation = "Idle"
 		
 	move_and_slide()
+	
+#INTERACTION
+func _ready():
+	interact_area.body_entered.connect(_on_body_entered)
+	interact_area.body_exited.connect(_on_body_exited)
+
+func _process(delta):
+	if Input.is_action_just_pressed("interact"):
+		if interactables.size() > 0:
+			interactables[0].interact()
+
+func _on_body_entered(body):
+	if body.has_method("interact"):
+		interactables.append(body)
+
+func _on_body_exited(body):
+	if body.has_method("interact"):
+		interactables.erase(body)
