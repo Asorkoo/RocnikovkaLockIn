@@ -1,56 +1,44 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjylvruw3qima"]
+[gd_scene load_steps=7 format=3 uid="uid://cjylvruw3qima"]
 
-[ext_resource type="Script" uid="uid://83eifd5bs05n" path="res://door.gd" id="1_w6aom"]
+[ext_resource type="Script" uid="uid://83eifd5bs05n" path="res://Scripts/door.gd" id="1_w6aom"]
+[ext_resource type="Texture2D" uid="uid://c61ln7vyrwjvs" path="res://Assets/photos/FLVZ3724.JPG" id="2_p0e35"]
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="3_fahql"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6aom"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e35"]
+size = Vector2(55.999992, 39)
 
-[sub_resource type="Animation" id="Animation_w6aom"]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.5707964]
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fahql"]
+size = Vector2(56, 71)
 
-[sub_resource type="Animation" id="Animation_p0e35"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0e35"]
-_data = {
-&"RESET": SubResource("Animation_p0e35"),
-&"open": SubResource("Animation_w6aom")
-}
+[sub_resource type="GDScript" id="GDScript_fahql"]
 
 [node name="Door" type="Node2D"]
 script = ExtResource("1_w6aom")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-18.74074, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_w6aom")
+position = Vector2(19, -12.5)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_p0e35")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_p0e35")
-}
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.12963295, -0.53211784)
+scale = Vector2(0.070324086, 0.04873062)
+texture = ExtResource("2_p0e35")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_fahql")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -41.0
+offset_top = -67.0
+offset_right = 58.0
+offset_bottom = -44.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_fahql")
+text = "Otevři dveře"
+script = SubResource("GDScript_fahql")

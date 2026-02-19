@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqs0xnxrtqdvk"]
 
-[ext_resource type="Script" uid="uid://b3d12eelq5pb5" path="res://settings.gd" id="1_i44u3"]
+[ext_resource type="Script" uid="uid://b3d12eelq5pb5" path="res://Scripts/settings.gd" id="1_i44u3"]
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="2_lhmql"]
 [ext_resource type="AudioStream" uid="uid://dc03ql1n6vigi" path="res://Uzi ft. Quavo - Go All Tha Way.mp3" id="3_lhmql"]
 
