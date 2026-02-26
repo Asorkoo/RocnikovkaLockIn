@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm11fm2s2l82d"]
+
+[ext_resource type="PackedScene" uid="uid://cahft8u3rtad5" path="res://slot.tscn" id="1_64hv7"]
+
+[node name="inv_ui" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -60.0
+offset_right = 20.0
+offset_bottom = 60.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+custom_minimum_size = Vector2(20, 120)
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Slot" parent="CanvasLayer/MarginContainer/VBoxContainer" instance=ExtResource("1_64hv7")]
+
+[node name="Slot2" parent="CanvasLayer/MarginContainer/VBoxContainer" instance=ExtResource("1_64hv7")]
+
+[node name="Slot3" parent="CanvasLayer/MarginContainer/VBoxContainer" instance=ExtResource("1_64hv7")]
+
+[node name="Slot4" parent="CanvasLayer/MarginContainer/VBoxContainer" instance=ExtResource("1_64hv7")]
+
+[node name="Slot5" parent="CanvasLayer/MarginContainer/VBoxContainer" instance=ExtResource("1_64hv7")]
+
+[node name="Slot6" parent="CanvasLayer/MarginContainer/VBoxContainer" instance=ExtResource("1_64hv7")]
