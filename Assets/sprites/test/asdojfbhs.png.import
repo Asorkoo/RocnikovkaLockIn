@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmsuowh6m77gr"
-path="res://.godot/imported/datlos.png-eba479f74df1a49492574b64f08aa5ea.ctex"
+uid="uid://gg1wmgg8c6cd"
+path="res://.godot/imported/asdojfbhs.png-55358da5c0588a2f583ba0631cd0c363.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/datlos.png"
-dest_files=["res://.godot/imported/datlos.png-eba479f74df1a49492574b64f08aa5ea.ctex"]
+source_file="res://Assets/sprites/test/asdojfbhs.png"
+dest_files=["res://.godot/imported/asdojfbhs.png-55358da5c0588a2f583ba0631cd0c363.ctex"]
 
 [params]
 
