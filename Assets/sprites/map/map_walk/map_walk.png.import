@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0io7gcvaf083"
-path="res://.godot/imported/map_grass_w_asfalt_idk.png-abc438f356cc11f98533d9ea273c4caa.ctex"
+uid="uid://clijw5xmnx710"
+path="res://.godot/imported/map_walk.png-18500aff74cb83dc4fba4d69b5fae2af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/map_grass_v/map_grass_w_asfalt_idk.png"
-dest_files=["res://.godot/imported/map_grass_w_asfalt_idk.png-abc438f356cc11f98533d9ea273c4caa.ctex"]
+source_file="res://Assets/sprites/map/map_walk/map_walk.png"
+dest_files=["res://.godot/imported/map_walk.png-18500aff74cb83dc4fba4d69b5fae2af.ctex"]
 
 [params]
 

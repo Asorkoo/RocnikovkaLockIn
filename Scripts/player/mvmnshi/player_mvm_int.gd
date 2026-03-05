@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var movement_speed: float = 100
 var character_direction : Vector2
 
+@export var inventory: Inventory
+
 func _physics_process(_delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
 	character_direction.y = Input.get_axis("move_up", "move_down")
@@ -19,3 +21,7 @@ func _physics_process(_delta):
 		if %sprite.animation != "Idle": %sprite.animation = "Idle"
 		
 	move_and_slide()
+
+func _on_area_2d_area_entered(area: Area2D):
+	if area.has_method("collect"):
+		area.collect()
