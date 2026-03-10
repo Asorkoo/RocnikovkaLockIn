@@ -5,9 +5,11 @@ extends Panel
 
 func update(item: InventoryItem):
 	if !item: 
-		backgroundSprite.frame = 1
-		itemSprite.visible = false
-	else: 
 		backgroundSprite.frame = 0
+		itemSprite.visible = false
+		print("GUI NOT UPDATED")
+	else: 
+		backgroundSprite.frame = 1
 		itemSprite.visible = true
 		itemSprite.texture = item.texture
+		print("GUI UPDATED")

@@ -135,7 +135,7 @@ sources/7 = SubResource("TileSetAtlasSource_05x41")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_iw27f"]
 resource_name = "collectables"
-scenes/2/scene = ExtResource("5_urblq")
+scenes/1/scene = ExtResource("5_urblq")
 
 [sub_resource type="TileSet" id="TileSet_71pa8"]
 sources/0 = SubResource("TileSetScenesCollectionSource_iw27f")
@@ -152,5 +152,5 @@ tile_set = SubResource("TileSet_0t07s")
 z_index = 1
 position = Vector2(-34, 55)
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAFABkAAAAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAFABkAAAAAAAAAAQAIABkAAAAAAAAAAQAFABcAAAAAAAAAAQADABgAAAAAAAAAAQA=")
 tile_set = SubResource("TileSet_71pa8")

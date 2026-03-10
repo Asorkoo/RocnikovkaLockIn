@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkg420ds6dtvr"]
 
 [ext_resource type="Texture2D" uid="uid://blogxtfpxolb4" path="res://Assets/sprites/inv/inv_slot.png" id="1_qqqon"]
-[ext_resource type="Script" uid="uid://caru6ycjhvs55" path="res://Scenes/inv_slot.gd" id="1_usncs"]
+[ext_resource type="Script" uid="uid://caru6ycjhvs55" path="res://Scripts/player/inv/inv_slot.gd" id="1_usncs"]
 
 [node name="Panel" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -14,7 +14,6 @@ script = ExtResource("1_usncs")
 texture = ExtResource("1_qqqon")
 centered = false
 vframes = 2
-frame = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 custom_minimum_size = Vector2(64, 64)

@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtjo24ttnvwi"]
+[gd_scene load_steps=6 format=3 uid="uid://dtjo24ttnvwi"]
 
 [ext_resource type="PackedScene" uid="uid://dvfkyf2elh5yj" path="res://inventory/collactables/collactable.tscn" id="1_hje3f"]
 [ext_resource type="Texture2D" uid="uid://ba4kmfj61u1sv" path="res://inventory/collactables/items_png/key.png" id="2_5d830"]
+[ext_resource type="Script" uid="uid://canwki4q4dxoi" path="res://inventory/collactables/items_scenes/key.gd" id="2_gr85s"]
+[ext_resource type="Resource" uid="uid://dvbakoo5ut04b" path="res://inventory/collactables/items_png/key.tres" id="3_qbybu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtd5w"]
 resource_local_to_scene = true
 size = Vector2(16, 6)
 
 [node name="Key" instance=ExtResource("1_hje3f")]
+script = ExtResource("2_gr85s")
+itemRes = ExtResource("3_qbybu")
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("RectangleShape2D_mtd5w")
