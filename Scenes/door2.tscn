@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7jjmokmgxuev"]
+
+[ext_resource type="Script" uid="uid://dnjxqupdon26h" path="res://Scripts/map/door_2.gd" id="1_8y1u2"]
+[ext_resource type="Texture2D" uid="uid://qmpqdmtjxerw" path="res://Assets/photos/ahfhhfdoor.png" id="1_gbtx0"]
+[ext_resource type="Resource" uid="uid://d0rgnoykqr0ud" path="res://inventory/collactables/items_png/isic.tres" id="2_4byyg"]
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="4_xgyta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8y1u2"]
+size = Vector2(64, 64)
+
+[sub_resource type="GDScript" id="GDScript_cn7rs"]
+
+[node name="door2" type="Area2D"]
+script = ExtResource("1_8y1u2")
+req_item = ExtResource("2_4byyg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gbtx0")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8y1u2")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -48.0
+offset_top = -65.0
+offset_right = 51.0
+offset_bottom = -42.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_xgyta")
+text = "Door Opened"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = SubResource("GDScript_cn7rs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -91,6 +91,7 @@ autoplay = "Idle"
 frame_progress = 0.592128
 
 [node name="collision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-0.5, -4.5)
 shape = SubResource("RectangleShape2D_vgqql")
 
@@ -98,6 +99,7 @@ shape = SubResource("RectangleShape2D_vgqql")
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 z_index = 1
 position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_6t5aa")

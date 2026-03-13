@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ecdj7jmsghys"]
+[gd_scene load_steps=7 format=3 uid="uid://ecdj7jmsghys"]
 
+[ext_resource type="Script" uid="uid://dmpe3354gjjiy" path="res://Scenes/game_scene.gd" id="1_rgj8m"]
 [ext_resource type="PackedScene" uid="uid://dtiqtbjua4wjs" path="res://Scenes/player.tscn" id="1_x87qo"]
-[ext_resource type="PackedScene" uid="uid://cjylvruw3qima" path="res://Scenes/door.tscn" id="2_b6fju"]
 [ext_resource type="PackedScene" uid="uid://bdnev6hplrwbs" path="res://Scenes/inventory_gui.tscn" id="3_6h5vk"]
 [ext_resource type="PackedScene" uid="uid://chaqxeujftfgc" path="res://map.tscn" id="4_fiftr"]
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="5_1ixah"]
+[ext_resource type="PackedScene" uid="uid://c7jjmokmgxuev" path="res://Scenes/door2.tscn" id="7_2fmhe"]
 
 [node name="game_scene" type="Node2D"]
+script = ExtResource("1_rgj8m")
 
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
 position = Vector2(334, -1074)
@@ -19,9 +22,6 @@ movement_speed = 150.0
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(2, 2)
 
-[node name="Door" parent="." instance=ExtResource("2_b6fju")]
-position = Vector2(1004, 434)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="inventory_gui" parent="CanvasLayer" instance=ExtResource("3_6h5vk")]
@@ -33,3 +33,16 @@ offset_top = -290.0
 offset_right = 100.0
 offset_bottom = 290.0
 grow_horizontal = 1
+
+[node name="exit" type="Button" parent="CanvasLayer"]
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_1ixah")
+theme_override_font_sizes/font_size = 24
+text = "Exit"
+
+[node name="door2" parent="." instance=ExtResource("7_2fmhe")]
+position = Vector2(974, 424)
+
+[connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]

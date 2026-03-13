@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://d0rgnoykqr0ud"]
+
+[ext_resource type="Script" uid="uid://cj2ou3npp1f62" path="res://inventory_item.gd" id="1_t0v1u"]
+[ext_resource type="Texture2D" uid="uid://bddvadtuphkkj" path="res://inventory/collactables/items_png/char_isic.png" id="2_fvwbf"]
+
+[resource]
+script = ExtResource("1_t0v1u")
+name = "isic"
+texture = ExtResource("2_fvwbf")
+metadata/_custom_type_script = "uid://cj2ou3npp1f62"
