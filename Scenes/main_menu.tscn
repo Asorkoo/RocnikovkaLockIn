@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="1_28flt"]
 [ext_resource type="Script" uid="uid://db0rg44usfk2" path="res://Scripts/ui/main_menu.gd" id="1_48xlc"]
-[ext_resource type="AudioStream" uid="uid://dc03ql1n6vigi" path="res://Uzi ft. Quavo - Go All Tha Way.mp3" id="3_1ehe0"]
+[ext_resource type="AudioStream" uid="uid://dc03ql1n6vigi" path="res://Sounds/Uzi ft. Quavo - Go All Tha Way.mp3" id="3_1ehe0"]
 
 [node name="mainMenu" type="Node2D"]
 position = Vector2(960, 552)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://chaqxeujftfgc"]
+[gd_scene load_steps=12 format=4 uid="uid://chaqxeujftfgc"]
 
 [ext_resource type="Texture2D" uid="uid://dwl01ou46o2tq" path="res://Assets/sprites/map/map_grass_v/map_grass_idk.png" id="1_p5pve"]
 [ext_resource type="Texture2D" uid="uid://b0io7gcvaf083" path="res://Assets/sprites/map/map_grass_v/map_grass_w_asfalt_idk.png" id="2_urblq"]
 [ext_resource type="Texture2D" uid="uid://dtsokdvjnjtqk" path="res://Assets/sprites/bckp/map_grass_w_asfalt.png" id="4_71pa8"]
+[ext_resource type="PackedScene" uid="uid://bhb3abpv35t82" path="res://inventory/collactables/items_scenes/baguette.tscn" id="5_iw27f"]
 [ext_resource type="PackedScene" uid="uid://dtjo24ttnvwi" path="res://inventory/collactables/items_scenes/key.tscn" id="5_urblq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iw27f"]
@@ -136,6 +137,7 @@ sources/7 = SubResource("TileSetAtlasSource_05x41")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_iw27f"]
 resource_name = "collectables"
 scenes/1/scene = ExtResource("5_urblq")
+scenes/2/scene = ExtResource("5_iw27f")
 
 [sub_resource type="TileSet" id="TileSet_71pa8"]
 sources/0 = SubResource("TileSetScenesCollectionSource_iw27f")
@@ -152,5 +154,5 @@ tile_set = SubResource("TileSet_0t07s")
 z_index = 1
 position = Vector2(-34, 55)
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAFABkAAAAAAAAAAQAIABkAAAAAAAAAAQAFABcAAAAAAAAAAQADABgAAAAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAFABkAAAAAAAAAAQAIABkAAAAAAAAAAQAFABcAAAAAAAAAAQADABgAAAAAAAAAAQAJABcAAAAAAAAAAgAKABkAAAAAAAAAAgA=")
 tile_set = SubResource("TileSet_71pa8")

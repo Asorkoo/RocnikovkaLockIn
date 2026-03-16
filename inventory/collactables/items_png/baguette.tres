@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://qj7vk7u0hip7"]
+
+[ext_resource type="Script" uid="uid://cj2ou3npp1f62" path="res://inventory_item.gd" id="1_j4rjc"]
+[ext_resource type="Texture2D" uid="uid://crj0g3k008kv4" path="res://inventory/collactables/items_png/baguettekiosk.png" id="2_men1j"]
+
+[resource]
+script = ExtResource("1_j4rjc")
+name = "Kureci Stripsy"
+texture = ExtResource("2_men1j")
+metadata/_custom_type_script = "uid://cj2ou3npp1f62"

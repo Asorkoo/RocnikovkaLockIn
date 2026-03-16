@@ -15,7 +15,7 @@ position = Vector2(334, -1074)
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
 z_index = 1
-position = Vector2(921, 569)
+position = Vector2(820, 570)
 scale = Vector2(4, 4)
 movement_speed = 150.0
 
@@ -42,7 +42,7 @@ theme_override_fonts/font = ExtResource("5_1ixah")
 theme_override_font_sizes/font_size = 24
 text = "Exit"
 
-[node name="door2" parent="." instance=ExtResource("7_2fmhe")]
-position = Vector2(974, 424)
+[node name="door" parent="." instance=ExtResource("7_2fmhe")]
+position = Vector2(981, 478)
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhb3abpv35t82"]
+
+[ext_resource type="Texture2D" uid="uid://crj0g3k008kv4" path="res://inventory/collactables/items_png/baguettekiosk.png" id="1_68qv2"]
+[ext_resource type="Script" uid="uid://21las6g4y04j" path="res://inventory/collactables/items_scenes/kiosek_baguette.gd" id="2_n6l7w"]
+[ext_resource type="AudioStream" uid="uid://83opv2u1ybv8" path="res://Sounds/eat.WAV" id="3_74c72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6l7w"]
+size = Vector2(16, 12)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("2_n6l7w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_68qv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_n6l7w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_74c72")

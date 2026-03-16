@@ -1,4 +1,4 @@
 extends "res://Scripts/player/inv/collactable.gd"
 
-func collect(inventory: Inventory):
+func collect(inventory: Inventory, player = self):
 	super(inventory)
