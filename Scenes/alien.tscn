@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://d2jccem8xp1k7"]
+
+[ext_resource type="Script" uid="uid://d2q3hm3pagjxe" path="res://Scripts/map/alien.gd" id="1_fhrgm"]
+[ext_resource type="Texture2D" uid="uid://coadijxt7hwk3" path="res://Assets/sprites/alien/sheets/DinoSprites - doux.png" id="1_mdm8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhrgm"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26noy"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sw17"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f320"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s84hg"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhb2l"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k27ix"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb26l"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjurw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhrgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26noy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sw17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f320")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s84hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhb2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k27ix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb26l")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56v5a"]
+size = Vector2(16, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5brx0"]
+size = Vector2(15, 9)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_fhrgm")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_kjurw")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_56v5a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("RectangleShape2D_5brx0")
