@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://capw7a055yvv8"
-path="res://.godot/imported/bg.png-8f20e49f649feaa7f8806f21df6df4ca.ctex"
+uid="uid://cx3doxp3g5b6c"
+path="res://.godot/imported/teach.png-fbcff30c2952e60db6f4fd4e563ecb3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/dinoCharactersVersion1.1/misc/bg.png"
-dest_files=["res://.godot/imported/bg.png-8f20e49f649feaa7f8806f21df6df4ca.ctex"]
+source_file="res://Assets/sprites/people/sheets/teach.png"
+dest_files=["res://.godot/imported/teach.png-fbcff30c2952e60db6f4fd4e563ecb3f.ctex"]
 
 [params]
 
