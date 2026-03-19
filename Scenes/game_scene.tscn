@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ecdj7jmsghys"]
+[gd_scene load_steps=10 format=3 uid="uid://ecdj7jmsghys"]
 
 [ext_resource type="Script" uid="uid://dmpe3354gjjiy" path="res://Scenes/game_scene.gd" id="1_rgj8m"]
 [ext_resource type="PackedScene" uid="uid://dtiqtbjua4wjs" path="res://Scenes/player.tscn" id="1_x87qo"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="5_1ixah"]
 [ext_resource type="PackedScene" uid="uid://c7jjmokmgxuev" path="res://Scenes/door2.tscn" id="7_2fmhe"]
 [ext_resource type="PackedScene" uid="uid://d2jccem8xp1k7" path="res://Scenes/alien.tscn" id="8_7iton"]
+[ext_resource type="PackedScene" uid="uid://drqorjqqbe2hi" path="res://Scenes/fake_teach.tscn" id="9_ikfsv"]
 
 [node name="game_scene" type="Node2D"]
 script = ExtResource("1_rgj8m")
@@ -17,7 +18,7 @@ position = Vector2(214, -906)
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
 z_index = 1
-position = Vector2(822, 557)
+position = Vector2(1313, 619)
 scale = Vector2(4, 4)
 movement_speed = 150.0
 
@@ -47,11 +48,15 @@ text = "Exit"
 position = Vector2(975, 461)
 
 [node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
-position = Vector2(733, 515)
+position = Vector2(859, 147)
 scale = Vector2(4, 4)
 
 [node name="alien" parent="." instance=ExtResource("8_7iton")]
 position = Vector2(385, 438)
+scale = Vector2(4, 4)
+
+[node name="fake_teach" parent="." instance=ExtResource("9_ikfsv")]
+position = Vector2(566, 502)
 scale = Vector2(4, 4)
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]
