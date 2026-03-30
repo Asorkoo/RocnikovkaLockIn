@@ -13,16 +13,13 @@
 [node name="game_scene" type="Node2D"]
 script = ExtResource("1_rgj8m")
 
-[node name="map" parent="." instance=ExtResource("4_fiftr")]
-position = Vector2(214, -906)
-
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
-z_index = 1
-position = Vector2(1313, 619)
-scale = Vector2(4, 4)
-movement_speed = 150.0
+z_index = 2
+position = Vector2(235, 58)
+scale = Vector2(3, 3)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(1.5, 1.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -48,15 +45,22 @@ text = "Exit"
 position = Vector2(975, 461)
 
 [node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
-position = Vector2(859, 147)
-scale = Vector2(4, 4)
+z_index = 2
+position = Vector2(914, 209)
+scale = Vector2(3, 3)
 
 [node name="alien" parent="." instance=ExtResource("8_7iton")]
+z_index = 2
 position = Vector2(385, 438)
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 
 [node name="fake_teach" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
 position = Vector2(566, 502)
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
+
+[node name="map" parent="." instance=ExtResource("4_fiftr")]
+z_index = -1
+position = Vector2(214, -906)
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]
