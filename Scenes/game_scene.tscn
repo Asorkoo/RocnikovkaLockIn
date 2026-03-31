@@ -17,6 +17,7 @@ script = ExtResource("1_rgj8m")
 z_index = 2
 position = Vector2(235, 58)
 scale = Vector2(3, 3)
+movement_speed = 180.0
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(1.5, 1.5)

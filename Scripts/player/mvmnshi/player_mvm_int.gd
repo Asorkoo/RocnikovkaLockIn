@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var movement_speed: float = 100
-@export var boost_speed: float = 80
+@export var movement_speed: float = 180
+@export var boost_speed: float = 50
 @export var boost_time: float = 3.0
 @onready var inventory: Inventory = load("res://inventory/player_inventory.tres")
 @onready var sprite = %sprite

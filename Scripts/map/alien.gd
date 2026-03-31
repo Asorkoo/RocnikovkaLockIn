@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 80
+@export var speed: float = 120
 @export var detection_radius: float = 600.0
 @onready var sprite = %sprite
 

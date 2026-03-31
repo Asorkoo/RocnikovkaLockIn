@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 80
+@export var speed: float = 120
 @export var detection_radius: float = 600.0
 @onready var sprite = %sprite
 
@@ -15,9 +15,9 @@ func _physics_process(delta):
 		return
 	
 	var distance = global_position.distance_to(player.global_position)
+	var direction = (player.global_position - global_position).normalized()
 	
 	if distance <= detection_radius:
-		var direction = (player.global_position - global_position).normalized()
 		velocity = direction * speed
 		
 		if direction.x > 0:
