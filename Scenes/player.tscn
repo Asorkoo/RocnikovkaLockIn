@@ -79,6 +79,7 @@ size = Vector2(13, 9)
 size = Vector2(20, 33)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
+y_sort_enabled = true
 script = ExtResource("1_6t5aa")
 movement_speed = 150.0
 

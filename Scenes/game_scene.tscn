@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://drqorjqqbe2hi" path="res://Scenes/fake_teach.tscn" id="9_ikfsv"]
 
 [node name="game_scene" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_rgj8m")
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
@@ -61,7 +62,6 @@ position = Vector2(566, 502)
 scale = Vector2(3, 3)
 
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
-z_index = -1
 position = Vector2(214, -906)
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]
