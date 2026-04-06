@@ -16,8 +16,8 @@ script = ExtResource("1_rgj8m")
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
 z_index = 2
-position = Vector2(235, 58)
-scale = Vector2(3, 3)
+position = Vector2(84, 55.000004)
+scale = Vector2(2.5, 2.5)
 movement_speed = 180.0
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -49,17 +49,17 @@ position = Vector2(975, 461)
 [node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
 z_index = 2
 position = Vector2(914, 209)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 
 [node name="alien" parent="." instance=ExtResource("8_7iton")]
 z_index = 2
 position = Vector2(385, 438)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach" parent="." instance=ExtResource("9_ikfsv")]
 z_index = 2
 position = Vector2(566, 502)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
 position = Vector2(214, -906)
