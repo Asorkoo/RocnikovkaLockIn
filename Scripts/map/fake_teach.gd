@@ -3,9 +3,14 @@ extends CharacterBody2D
 @export var speed: float = 120
 @export var detection_radius: float = 600.0
 @onready var sprite = %sprite
+@onready var navigation: NavigationAgent2D = $NavigationAgent2D
+@export var path_calc: float = 1
+
 
 var player: Node2D
 var chase: float = 0.0
+var path_calc_time := 0.0
+
 
 func _ready():
 	player = get_tree().get_first_node_in_group("player")
@@ -15,19 +20,25 @@ func _physics_process(delta):
 		return
 	
 	var distance = global_position.distance_to(player.global_position)
-	var direction = (player.global_position - global_position).normalized()
 	
 	if distance <= detection_radius:
-		velocity = direction * speed
+		path_calc_time -= delta
+		if path_calc_time <= 0.0:
+			navigation.target_position = player.global_position
+			path_calc_time = path_calc
+		if not navigation.is_navigation_finished():
+			var next_hop = navigation.get_next_path_position()
+			var direction = (next_hop - global_position).normalized()
 		
-		if direction.x > 0:
-			sprite.flip_h = false
-		elif direction.x < 0:
-			sprite.flip_h = true
+			velocity = direction * speed
+			if direction.x > 0:
+				sprite.flip_h = false
+			elif direction.x < 0:
+				sprite.flip_h = true
 		
 		chase += delta
 		
-		if chase < 2.0:
+		if chase < 2.0 and distance >= 100:
 			if sprite.animation != "Walking":
 				sprite.play("Walking")
 		else:

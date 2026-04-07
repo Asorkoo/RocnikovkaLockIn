@@ -113,6 +113,7 @@ size = Vector2(20, 10)
 
 [node name="fake_teach" type="CharacterBody2D"]
 script = ExtResource("1_nui3g")
+path_calc = 0.5
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -128,3 +129,10 @@ shape = SubResource("RectangleShape2D_7uvpc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_0wu1c")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 30.0
+target_desired_distance = 3.0
+path_max_distance = 200.0
+path_postprocessing = 1
+debug_enabled = true

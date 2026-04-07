@@ -1,15 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7jjmokmgxuev"]
 
 [ext_resource type="Script" uid="uid://c5dwt4mmkt6b0" path="res://Scripts/map/door2.gd" id="1_4byyg"]
-[ext_resource type="Texture2D" uid="uid://qmpqdmtjxerw" path="res://Assets/photos/ahfhhfdoor.png" id="1_gbtx0"]
 [ext_resource type="Resource" uid="uid://d0rgnoykqr0ud" path="res://inventory/collactables/items_png/isic.tres" id="2_4byyg"]
+[ext_resource type="Texture2D" uid="uid://nveivdye7il5" path="res://Assets/sprites/map/map_wall/map_wall_door/map_wall_door.png" id="3_xgyta"]
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="4_xgyta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn7rs"]
-size = Vector2(64, 32)
+size = Vector2(16, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xgyta"]
-size = Vector2(64, 76)
+size = Vector2(16, 22)
 
 [node name="Door" type="Node2D"]
 script = ExtResource("1_4byyg")
@@ -18,7 +18,7 @@ req_item = ExtResource("2_4byyg")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 16)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_cn7rs")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -27,15 +27,15 @@ shape = SubResource("RectangleShape2D_cn7rs")
 shape = SubResource("RectangleShape2D_xgyta")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_gbtx0")
+y_sort_enabled = true
+texture = ExtResource("3_xgyta")
 hframes = 2
 
 [node name="Label" type="Label" parent="."]
-visible = false
-offset_left = -48.0
-offset_top = -65.0
-offset_right = 51.0
-offset_bottom = -42.0
+offset_left = -37.0
+offset_top = -44.0
+offset_right = 36.0
+offset_bottom = -21.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_xgyta")
 text = "Door Opened"

@@ -71,8 +71,8 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cidnx"]
-size = Vector2(15, 10)
+[sub_resource type="CircleShape2D" id="CircleShape2D_lceqv"]
+radius = 5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5h3q"]
 size = Vector2(20, 34)
@@ -87,10 +87,12 @@ autoplay = "idle"
 frame_progress = 0.88558775
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 4)
-shape = SubResource("RectangleShape2D_cidnx")
+position = Vector2(0, 4)
+scale = Vector2(1.5, 1)
+shape = SubResource("CircleShape2D_lceqv")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["player"]]
 shape = SubResource("RectangleShape2D_k5h3q")
