@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=13 format=3 uid="uid://dkveh2tk74oga"]
 
 [ext_resource type="Texture2D" path="res://Assets/sprites/people/sheets/bazilisek.png" id="1_wur4n"]
+=======
+[gd_scene load_steps=13 format=3 uid="uid://dt6xhfycvtkln"]
+
+[ext_resource type="Texture2D" uid="uid://dy7ia8xetbynm" path="res://Assets/sprites/people/sheets/bazilisek.png" id="1_wur4n"]
+>>>>>>> Stashed changes
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfylm"]
 radius = 14.0
@@ -78,7 +84,10 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+<<<<<<< Updated upstream
 y_sort_enabled = true
+=======
+>>>>>>> Stashed changes
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -86,11 +95,23 @@ y_sort_enabled = true
 shape = SubResource("CircleShape2D_pfylm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< Updated upstream
+=======
+z_index = 2
+y_sort_enabled = true
+>>>>>>> Stashed changes
 position = Vector2(5.9604645e-08, 6)
 scale = Vector2(0.38, 0.165)
 shape = SubResource("CircleShape2D_8fu6w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a3q3b")
+<<<<<<< Updated upstream
 animation = &"Idle"
 autoplay = "Idle"
+=======
+animation = &"Walking"
+autoplay = "Idle"
+frame = 2
+frame_progress = 0.64317334
+>>>>>>> Stashed changes
