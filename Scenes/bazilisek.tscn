@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dkveh2tk74oga"]
 
-[ext_resource type="Texture2D" path="res://Assets/sprites/people/sheets/bazilisek.png" id="1_wur4n"]
+[ext_resource type="Texture2D" uid="uid://dwci5ldujbjbo" path="res://Assets/sprites/people/sheets/bazilisek.png" id="1_wur4n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfylm"]
 radius = 14.0
@@ -94,3 +94,4 @@ shape = SubResource("CircleShape2D_8fu6w")
 sprite_frames = SubResource("SpriteFrames_a3q3b")
 animation = &"Idle"
 autoplay = "Idle"
+frame_progress = 0.051875383

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx32ae0lo2oa4"
-path="res://.godot/imported/student_player-export.png-6ec4e7c4a73edd3194ed98a947ffd02a.ctex"
+uid="uid://dwci5ldujbjbo"
+path="res://.godot/imported/bazilisek.png-44a98a0bbe6f1f3a3cbe4669f77a571d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/people/sheets/student_player-export.png"
-dest_files=["res://.godot/imported/student_player-export.png-6ec4e7c4a73edd3194ed98a947ffd02a.ctex"]
+source_file="res://Assets/sprites/people/sheets/bazilisek.png"
+dest_files=["res://.godot/imported/bazilisek.png-44a98a0bbe6f1f3a3cbe4669f77a571d.ctex"]
 
 [params]
 
