@@ -7,11 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://chaqxeujftfgc" path="res://map.tscn" id="4_fiftr"]
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="5_1ixah"]
 [ext_resource type="PackedScene" uid="uid://d2jccem8xp1k7" path="res://Scenes/alien.tscn" id="8_7iton"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dkveh2tk74oga" path="res://Scenes/bazilisek.tscn" id="9_5dgvu"]
-=======
-[ext_resource type="PackedScene" uid="uid://dt6xhfycvtkln" path="res://Scenes/bazilisek.tscn" id="9_5dgvu"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://drqorjqqbe2hi" path="res://Scenes/fake_teach.tscn" id="9_ikfsv"]
 
 [node name="game_scene" type="Node2D"]
@@ -70,7 +66,5 @@ scale = Vector2(2.5, 2.5)
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
 position = Vector2(135, -925)
 metadata/_edit_lock_ = true
-
-[node name="bazilisek" parent="." instance=ExtResource("9_5dgvu")]
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]
