@@ -86,14 +86,13 @@ movement_speed = 150.0
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-animation = &"Walking"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(1, -4.0000005)
-scale = Vector2(1.35, 0.845)
+position = Vector2(0.52098656, 6.6513195)
+scale = Vector2(1.305, 0.5)
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="Area2D" type="Area2D" parent="."]

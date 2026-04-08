@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var detection_radius: float = 600.0
 @onready var sprite = %sprite
 @onready var navigation: NavigationAgent2D = $NavigationAgent2D
-@export var path_calc: float = 1
+@export var path_calc: float = 0.5
 
 
 var player: Node2D

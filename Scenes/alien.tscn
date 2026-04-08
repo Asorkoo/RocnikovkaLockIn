@@ -76,6 +76,7 @@ animations = [{
 size = Vector2(16, 24)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fhrgm"]
+radius = 10.457517
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -96,8 +97,8 @@ visible = false
 shape = SubResource("RectangleShape2D_56v5a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-scale = Vector2(0.765, 0.5)
+position = Vector2(1, 7)
+scale = Vector2(0.5, 0.225)
 shape = SubResource("CircleShape2D_fhrgm")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
