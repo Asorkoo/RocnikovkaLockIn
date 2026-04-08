@@ -111,6 +111,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wu1c"]
 
 [node name="fake_teach" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_nui3g")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]

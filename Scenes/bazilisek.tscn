@@ -1,0 +1,96 @@
+[gd_scene load_steps=13 format=3 uid="uid://dkveh2tk74oga"]
+
+[ext_resource type="Texture2D" path="res://Assets/sprites/people/sheets/bazilisek.png" id="1_wur4n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfylm"]
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8fu6w"]
+radius = 21.501339
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6olj"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6vma"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pruvc"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uivur"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ps32"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs2al"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5i3b"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2kp8"]
+atlas = ExtResource("1_wur4n")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3q3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6olj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6vma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pruvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uivur")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ps32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs2al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5i3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2kp8")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+y_sort_enabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pfylm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.9604645e-08, 6)
+scale = Vector2(0.38, 0.165)
+shape = SubResource("CircleShape2D_8fu6w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a3q3b")
+animation = &"Idle"
+autoplay = "Idle"
