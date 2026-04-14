@@ -21,7 +21,6 @@ var health: int = 3
 var player_knock_velocity: Vector2 = Vector2.ZERO
 var spawn_position: Vector2
 
-
 func update_hearts():
 	for i in range(hearts.size()):
 		hearts[i].visible = i < health
@@ -70,7 +69,6 @@ func _physics_process(_delta):
 func _on_area_2d_area_entered(area):
 	if area.has_method("collect"):
 		area.collect(inventory, self)
-		
 		
 func _ready():
 	print(inventory)
