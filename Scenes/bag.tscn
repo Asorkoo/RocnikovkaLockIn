@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmvhqvus36pv1"]
+
+[ext_resource type="Script" uid="uid://bf80i275tcofw" path="res://Scripts/bag.gd" id="1_yeinl"]
+[ext_resource type="Texture2D" uid="uid://dijv2ct8pdnwd" path="res://Assets/sprites/map/bag.png" id="2_5bm2g"]
+[ext_resource type="Script" uid="uid://cj2ou3npp1f62" path="res://inventory_item.gd" id="2_57iao"]
+[ext_resource type="Resource" uid="uid://d0rgnoykqr0ud" path="res://inventory/collactables/items_png/isic.tres" id="3_722nh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57iao"]
+size = Vector2(16, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57iao"]
+
+[node name="Bag" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_yeinl")
+contents = Array[ExtResource("2_57iao")]([ExtResource("3_722nh")])
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+scale = Vector2(1, 0.4)
+shape = SubResource("RectangleShape2D_57iao")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_57iao")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5bm2g")

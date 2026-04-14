@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://chaqxeujftfgc"]
+[gd_scene load_steps=35 format=4 uid="uid://chaqxeujftfgc"]
 
 [ext_resource type="Texture2D" uid="uid://b6vhyc32uo3pr" path="res://Assets/sprites/map/map_wall/map_wall.png" id="1_05x41"]
 [ext_resource type="Texture2D" uid="uid://duv3sjhw5pxev" path="res://Assets/sprites/map/map_wall/map_wall_connections.png" id="1_gqbix"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bjy770qomg20c" path="res://Assets/sprites/map/map_furniture/map_furniture.png" id="10_oysan"]
 [ext_resource type="Texture2D" uid="uid://b1iltw2rnck5f" path="res://Assets/sprites/map/map_furniture/map_furniture_2.png" id="11_sb2pt"]
 [ext_resource type="PackedScene" uid="uid://c7jjmokmgxuev" path="res://Scenes/door2.tscn" id="13_6qsgm"]
+[ext_resource type="PackedScene" uid="uid://bmvhqvus36pv1" path="res://Scenes/bag.tscn" id="14_ooc2g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oysan"]
 texture = ExtResource("1_gqbix")
@@ -379,6 +380,11 @@ z_index = 2
 y_sort_enabled = true
 position = Vector2(929.00006, 1184)
 scale = Vector2(4.2, 4.2)
+
+[node name="Bag" parent="." instance=ExtResource("14_ooc2g")]
+z_index = 2
+position = Vector2(-65, 980)
+scale = Vector2(1.5, 1.5)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_6qsgm")

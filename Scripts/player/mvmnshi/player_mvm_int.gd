@@ -86,3 +86,11 @@ func speedboost_apply():
 	movement_speed -= boost_speed
 	boost_active = false
 	
+func add_to_inventory(item: InventoryItem):
+	if inventory and inventory.has_method("collect"):
+		# Assuming your Inventory resource has a function called 'insert'
+		inventory.collect(item)
+	else:
+		# If you don't have an 'insert' function, we'll manually add it
+		# depending on how your Inventory resource is structured.
+		print("Item received, but Inventory resource needs an insert function!")

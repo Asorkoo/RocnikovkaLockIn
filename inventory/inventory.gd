@@ -5,7 +5,7 @@ signal updated
 
 @export var items: Array[InventoryItem]
 
-func insert_into_inventory(item: InventoryItem):
+func collect(item: InventoryItem):
 	for i in range(items.size()):
 		if !items[i]:
 			items[i] = item
