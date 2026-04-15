@@ -38,13 +38,19 @@ func take_damage(from_position: Vector2):
 		die()
 		
 func die():
-	print("respawning..")
 	health = max_health
 	update_hearts()
 	global_position = spawn_position
 	velocity = Vector2.ZERO
-
-func _physics_process(_delta):
+	set_physics_process(false) 
+	
+	var death_screen = get_tree().get_first_node_in_group("death_screen")
+	if death_screen:
+		death_screen.show_death_screen()
+func respawn_complete():
+	set_physics_process(true)
+	
+func movement(_delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
 	character_direction.y = Input.get_axis("move_up", "move_down")
 	character_direction = character_direction.normalized()
@@ -64,6 +70,10 @@ func _physics_process(_delta):
 	velocity += player_knock_velocity
 	player_knock_velocity = player_knock_velocity.move_toward(Vector2.ZERO, 600 * _delta)
 	
+
+func _physics_process(_delta):
+
+	movement(_delta)
 	move_and_slide()
 
 func _on_area_2d_area_entered(area):

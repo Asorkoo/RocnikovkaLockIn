@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuytgjbtvkbuw"]
+
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="1_8hps1"]
+[ext_resource type="Script" uid="uid://c8dlqrghhn61y" path="res://Scenes/death_screen.gd" id="1_rwas2"]
+
+[node name="DeathScreen" type="CanvasLayer" groups=["death_screen"]]
+visible = false
+script = ExtResource("1_rwas2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.051970966, 0.05197096, 0.05197095, 1)
+theme_override_colors/font_outline_color = Color(0.2627451, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 64
+theme_override_fonts/font = ExtResource("1_8hps1")
+theme_override_font_sizes/font_size = 256
+text = "DEATH"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
