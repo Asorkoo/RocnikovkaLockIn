@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjsjltr6p4cj6"]
+
+[ext_resource type="Texture2D" uid="uid://4pco7r5kuvup" path="res://Assets/sprites/map/map_wall/map_wall_door/map_wall_door_class.png" id="1_6kqg0"]
+[ext_resource type="Script" uid="uid://cpenp1axidvkn" path="res://Scenes/class_door.gd" id="1_dyyst"]
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="3_pm2ha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyyst"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm2ha"]
+size = Vector2(16, 22)
+
+[node name="class_door" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_dyyst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_dyyst")
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_pm2ha")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_6kqg0")
+hframes = 2
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+y_sort_enabled = true
+offset_left = -37.0
+offset_top = -44.0
+offset_right = 36.0
+offset_bottom = -21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pm2ha")
+text = "Door Opened"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

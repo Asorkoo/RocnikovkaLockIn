@@ -12,10 +12,18 @@ var can_attack := true
 var player: Node2D
 var path_calc_time := 0.0
 var player_in_range: Node2D = null 
+var spawn_position: Vector2
 
 func _ready():
 	player = get_tree().get_first_node_in_group("player")
-
+	spawn_position = global_position
+	add_to_group("enemies")
+	
+func reset_scene():
+	global_position = spawn_position
+	velocity = Vector2.ZERO
+	path_calc_time = 0.0
+	
 func _physics_process(delta):
 	if player == null:
 		return

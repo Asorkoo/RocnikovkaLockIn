@@ -4,15 +4,15 @@ extends CanvasLayer
 
 func _ready():
 	hide()
+	black_screen.modulate.a = 0
 
 func show_death_screen():
-	self.show()
-	black_screen.modulate.a = 0 
-	
+	show()
 	var tween = create_tween()
-	tween.tween_property(self, "modulate:a", 1.0, 2.0)
-	
-func _input(event):
-	if visible and event.is_action_pressed("ui_accept"):
-		Engine.time_scale = 1.0
-		get_tree().reload_current_scene()
+	tween.tween_property(black_screen, "modulate:a", 1.0, 1.0) 
+
+func hide_death_screen():
+	var tween = create_tween()
+	tween.tween_property(black_screen, "modulate:a", 0.0, 1.0) 
+	await tween.finished
+	hide()

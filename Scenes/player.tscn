@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtiqtbjua4wjs"]
+[gd_scene load_steps=15 format=3 uid="uid://dtiqtbjua4wjs"]
 
 [ext_resource type="Script" uid="uid://cdcyu1353vbbu" path="res://Scripts/player/mvmnshi/player_mvm_int.gd" id="1_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://b8gdtwrqy4b2r" path="res://Assets/sprites/people/sheets/student_player.png" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://cuytgjbtvkbuw" path="res://Scenes/death_screen.tscn" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -73,15 +74,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(6.130268, 10)
+size = Vector2(9.195403, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
 size = Vector2(20, 33)
 
-[node name="player" type="CharacterBody2D" groups=["player"]]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("death_ui") groups=["player"]]
 y_sort_enabled = true
 script = ExtResource("1_6t5aa")
 movement_speed = 150.0
+death_ui = NodePath("DeathScreen")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -90,7 +92,7 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(1, 6.5)
+position = Vector2(1.0000001, 6.5)
 scale = Vector2(1.305, 0.5)
 shape = SubResource("RectangleShape2D_cvnsp")
 
@@ -101,5 +103,7 @@ collision_mask = 3
 z_index = 1
 position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_6t5aa")
+
+[node name="DeathScreen" parent="." instance=ExtResource("3_6t5aa")]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c8dlqrghhn61y" path="res://Scenes/death_screen.gd" id="1_rwas2"]
 
 [node name="DeathScreen" type="CanvasLayer" groups=["death_screen"]]
+layer = 100
 visible = false
 script = ExtResource("1_rwas2")
 

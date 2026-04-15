@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var boost_time: float = 3.0
 @export var max_health: int = 3
 @export var player_knock_strength: float = 250
+@export var death_ui: CanvasLayer
 @onready var inventory: Inventory = load("res://inventory/player_inventory.tres")
 @onready var sprite = %sprite
 
@@ -38,15 +39,32 @@ func take_damage(from_position: Vector2):
 		die()
 		
 func die():
+	if not is_physics_processing(): 
+		return
 	health = max_health
-	update_hearts()
-	global_position = spawn_position
-	velocity = Vector2.ZERO
-	set_physics_process(false) 
-	
+	if has_method("update_hearts"):
+		update_hearts()
+
 	var death_screen = get_tree().get_first_node_in_group("death_screen")
 	if death_screen:
+		set_physics_process(false) 
 		death_screen.show_death_screen()
+
+		await get_tree().create_timer(2.0).timeout
+		
+		global_position = spawn_position
+		velocity = Vector2.ZERO
+		health = max_health
+		get_tree().call_group("enemies", "reset_scene")
+		update_hearts()
+		
+		await get_tree().create_timer(0.5).timeout
+		death_screen.hide_death_screen()
+		set_physics_process(true)
+	else:
+		global_position = spawn_position
+		health = max_health
+		update_hearts()
 func respawn_complete():
 	set_physics_process(true)
 	

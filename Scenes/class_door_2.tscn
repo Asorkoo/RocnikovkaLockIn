@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dek2h4ww8bf7b"]
+
+[ext_resource type="Texture2D" uid="uid://dusqhkfdum4wx" path="res://Assets/sprites/map/map_wall/map_wall_door/map_wall_door_class_2.png" id="1_eoavv"]
+[ext_resource type="Script" uid="uid://dw5u2khb30dfl" path="res://Scenes/class_door_2.gd" id="1_t37yo"]
+[ext_resource type="Resource" uid="uid://dvbakoo5ut04b" path="res://inventory/collactables/items_png/key.tres" id="2_gwo4n"]
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="4_gwo4n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qv4s"]
+size = Vector2(16, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t37yo"]
+size = Vector2(16, 22)
+
+[node name="class_door2" type="Node2D"]
+script = ExtResource("1_t37yo")
+req_item = ExtResource("2_gwo4n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+y_sort_enabled = true
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_8qv4s")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_t37yo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_eoavv")
+hframes = 2
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+y_sort_enabled = true
+offset_left = -37.0
+offset_top = -44.0
+offset_right = 36.0
+offset_bottom = -21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gwo4n")
+text = "Door Opened"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
