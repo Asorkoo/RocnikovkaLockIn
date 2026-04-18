@@ -5,7 +5,7 @@ extends Node2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var blocker: StaticBody2D = $StaticBody2D
 @onready var label: Label = $Label
-
+@onready var label2: Label = $Label2
 var unlocked := false
 
 func _ready():
@@ -36,6 +36,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	if body.name != "player":
 		return
-		
+	
+	if !has_key():
+		label2.visible = true
+
 	if has_key():
 		unlock_door()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjsjltr6p4cj6"]
+[gd_scene load_steps=7 format=3 uid="uid://bjsjltr6p4cj6"]
 
 [ext_resource type="Texture2D" uid="uid://4pco7r5kuvup" path="res://Assets/sprites/map/map_wall/map_wall_door/map_wall_door_class.png" id="1_6kqg0"]
 [ext_resource type="Script" uid="uid://cpenp1axidvkn" path="res://Scenes/class_door.gd" id="1_dyyst"]
+[ext_resource type="Resource" uid="uid://d0rgnoykqr0ud" path="res://inventory/collactables/items_png/isic.tres" id="2_jsrgt"]
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="3_pm2ha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyyst"]
@@ -13,6 +14,7 @@ size = Vector2(16, 22)
 [node name="class_door" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_dyyst")
+req_item = ExtResource("2_jsrgt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 y_sort_enabled = true
@@ -34,6 +36,7 @@ texture = ExtResource("1_6kqg0")
 hframes = 2
 
 [node name="Label" type="Label" parent="."]
+visible = false
 z_index = 10
 y_sort_enabled = true
 offset_left = -37.0
@@ -43,6 +46,20 @@ offset_bottom = -21.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_pm2ha")
 text = "Door Opened"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+z_index = 10
+y_sort_enabled = true
+offset_left = -37.0
+offset_top = -44.0
+offset_right = 36.0
+offset_bottom = -21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pm2ha")
+text = "No or Wrong key"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -18,7 +18,7 @@ script = ExtResource("1_rgj8m")
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
 z_index = 2
-position = Vector2(-63.99994, 111.999985)
+position = Vector2(-171.00002, 995)
 scale = Vector2(2.5, 2.5)
 movement_speed = 180.0
 
@@ -65,27 +65,26 @@ texture = ExtResource("5_5dgvu")
 
 [node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
 z_index = 2
-position = Vector2(914, 209)
+position = Vector2(719, 919)
 scale = Vector2(2.5, 2.5)
 
 [node name="alien" parent="." instance=ExtResource("8_7iton")]
 z_index = 2
-position = Vector2(1891.0002, -133.99997)
+position = Vector2(1541, 768.00006)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach" parent="." instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(1097.9999, 155.00005)
+position = Vector2(961, 754)
 scale = Vector2(2.5, 2.5)
 
 [node name="bazilisek" parent="." instance=ExtResource("9_5dgvu")]
 z_index = 2
-position = Vector2(-194, -492)
+position = Vector2(-444, 429.0001)
 scale = Vector2(2.5, 2.5)
 
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
-position = Vector2(135, -925)
-metadata/_edit_lock_ = true
+position = Vector2(1, 5)
 
 [node name="DeathScreen" parent="." instance=ExtResource("11_uscyt")]
 
