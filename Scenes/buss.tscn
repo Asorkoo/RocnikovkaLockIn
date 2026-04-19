@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3 uid="uid://bvuvfe22iixdu"]
+
+[ext_resource type="Script" uid="uid://1vcu3w31v18o" path="res://Scripts/map/busss.gd" id="1_v8fvo"]
+[ext_resource type="Texture2D" uid="uid://cm6sv6wldh68a" path="res://Assets/sprites/map/bus2.png" id="2_gysv0"]
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="3_3ivl3"]
+[ext_resource type="Texture2D" uid="uid://b33tdu1a2hwjw" path="res://Assets/sprites/map/bus1.png" id="3_gysv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5w2b"]
+size = Vector2(168, 84)
+
+[sub_resource type="Animation" id="Animation_ahbki"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1440, 1530)]
+}
+
+[sub_resource type="Animation" id="Animation_d3q2o"]
+resource_name = "drive_away"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1440, 1530), Vector2(960, 1530), Vector2(960, 1800)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_gysv0"), ExtResource("2_gysv0")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d0xx0"]
+_data = {
+&"RESET": SubResource("Animation_ahbki"),
+&"drive_away": SubResource("Animation_d3q2o")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_q73dt"]
+font = ExtResource("3_3ivl3")
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.906)
+
+[node name="bus" type="Node2D"]
+position = Vector2(1440, 1530)
+script = ExtResource("1_v8fvo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
+y_sort_enabled = true
+texture = ExtResource("3_gysv0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = -1
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_c5w2b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Area2D/CollisionShape2D")
+libraries = {
+&"": SubResource("AnimationLibrary_d0xx0")
+}
+
+[node name="Label" type="Label" parent="."]
+offset_left = -61.0
+offset_top = -42.0
+offset_right = 70.0
+offset_bottom = -19.0
+text = "Press E to drive away"
+label_settings = SubResource("LabelSettings_q73dt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+zoom = Vector2(1.5, 1.5)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

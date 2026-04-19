@@ -84,8 +84,87 @@ position = Vector2(-444, 429.0001)
 scale = Vector2(2.5, 2.5)
 
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
-position = Vector2(1, 5)
 
 [node name="DeathScreen" parent="." instance=ExtResource("11_uscyt")]
+
+[node name="fake_teach2" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(137, 989)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach3" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-1024, 855)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach4" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-934, 504)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach5" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-1000, 56)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach6" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-1015, -339)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach7" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-379, -267)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach8" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(200, -250)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach9" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(1599, -390)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach10" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2167, -386)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach11" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2986, -398)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach12" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2945, 165)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach13" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(3068, 489)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach14" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2770, 946)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach15" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2322, 928)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach16" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(1989, 1012)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach17" parent="." instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(1608, 1025)
+scale = Vector2(2.5, 2.5)
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]
