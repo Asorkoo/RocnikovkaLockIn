@@ -18,12 +18,112 @@ script = ExtResource("1_rgj8m")
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
 z_index = 2
-position = Vector2(-171.00002, 995)
+position = Vector2(-1244, 298)
 scale = Vector2(2.5, 2.5)
 movement_speed = 180.0
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.75, 1.75)
+
+[node name="Fake_Teachs" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="fake_teach" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(961, 754)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach2" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(167, 986)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach3" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-905, 929)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach4" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-934, 504)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach6" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-1015, -339)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach7" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(-379, -267)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach8" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(200, -250)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach9" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(1599, -390)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach10" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2167, -386)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach11" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2986, -398)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach12" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2945, 165)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach13" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(3068, 489)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach14" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2770, 946)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach15" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(2322, 928)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach16" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(1989, 1012)
+scale = Vector2(2.5, 2.5)
+
+[node name="fake_teach17" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
+z_index = 2
+position = Vector2(1608, 1025)
+scale = Vector2(2.5, 2.5)
+
+[node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(719, 919)
+scale = Vector2(2.5, 2.5)
+
+[node name="alien" parent="." instance=ExtResource("8_7iton")]
+z_index = 2
+position = Vector2(1541, 768.00006)
+scale = Vector2(2.5, 2.5)
+
+[node name="bazilisek" parent="." instance=ExtResource("9_5dgvu")]
+z_index = 2
+position = Vector2(-444, 429.0001)
+scale = Vector2(2.5, 2.5)
+
+[node name="map" parent="." instance=ExtResource("4_fiftr")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -63,108 +163,11 @@ offset_right = 1616.0
 offset_bottom = 128.0
 texture = ExtResource("5_5dgvu")
 
-[node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
-z_index = 2
-position = Vector2(719, 919)
-scale = Vector2(2.5, 2.5)
-
-[node name="alien" parent="." instance=ExtResource("8_7iton")]
-z_index = 2
-position = Vector2(1541, 768.00006)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(961, 754)
-scale = Vector2(2.5, 2.5)
-
-[node name="bazilisek" parent="." instance=ExtResource("9_5dgvu")]
-z_index = 2
-position = Vector2(-444, 429.0001)
-scale = Vector2(2.5, 2.5)
-
-[node name="map" parent="." instance=ExtResource("4_fiftr")]
-
 [node name="DeathScreen" parent="." instance=ExtResource("11_uscyt")]
 
-[node name="fake_teach2" parent="." instance=ExtResource("9_ikfsv")]
+[node name="teacher2" parent="." instance=ExtResource("2_2fmhe")]
 z_index = 2
-position = Vector2(137, 989)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach3" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(-1024, 855)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach4" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(-934, 504)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach5" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(-1000, 56)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach6" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(-1015, -339)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach7" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(-379, -267)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach8" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(200, -250)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach9" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(1599, -390)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach10" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(2167, -386)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach11" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(2986, -398)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach12" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(2945, 165)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach13" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(3068, 489)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach14" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(2770, 946)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach15" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(2322, 928)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach16" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(1989, 1012)
-scale = Vector2(2.5, 2.5)
-
-[node name="fake_teach17" parent="." instance=ExtResource("9_ikfsv")]
-z_index = 2
-position = Vector2(1608, 1025)
+position = Vector2(-1003, 78)
 scale = Vector2(2.5, 2.5)
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]

@@ -3,7 +3,7 @@ extends Node2D
 @export var req_item: InventoryItem
 @onready var inventory: Inventory = load("res://inventory/player_inventory.tres")
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var blocker: StaticBody2D = $StaticBody2D
+@onready var collision: StaticBody2D = $StaticBody2D
 @onready var label: Label = $Label
 
 var unlocked := false
@@ -21,7 +21,7 @@ func has_isic() -> bool:
 func unlock_door():
 	unlocked = true
 	sprite.frame = 1
-	blocker.process_mode = Node.PROCESS_MODE_DISABLED
+	collision.process_mode = Node.PROCESS_MODE_DISABLED
 	show_label()
 	
 func show_label():

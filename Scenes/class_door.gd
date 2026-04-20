@@ -34,9 +34,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if unlocked:
 		return
 	
-	if body.name != "player":
-		return
-	
 	if !has_key():
 		label2.visible = true
 

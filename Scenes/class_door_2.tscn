@@ -12,6 +12,7 @@ size = Vector2(16, 8)
 size = Vector2(16, 22)
 
 [node name="class_door2" type="Node2D"]
+position = Vector2(0, -4)
 script = ExtResource("1_t37yo")
 req_item = ExtResource("2_gwo4n")
 

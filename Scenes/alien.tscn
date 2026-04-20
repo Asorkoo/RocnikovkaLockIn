@@ -75,8 +75,8 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhrgm"]
 radius = 14.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fhrgm"]
-radius = 10.457517
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhrgm"]
+size = Vector2(30, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -95,9 +95,11 @@ autoplay = "Idle"
 shape = SubResource("CapsuleShape2D_fhrgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 7)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0.5, 7)
 scale = Vector2(0.5, 0.225)
-shape = SubResource("CircleShape2D_fhrgm")
+shape = SubResource("RectangleShape2D_fhrgm")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 30.0

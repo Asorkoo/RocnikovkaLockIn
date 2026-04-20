@@ -65,8 +65,6 @@ func die():
 		global_position = spawn_position
 		health = max_health
 		update_hearts()
-func respawn_complete():
-	set_physics_process(true)
 	
 func movement(_delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
@@ -114,11 +112,6 @@ func speedboost_apply():
 	movement_speed -= boost_speed
 	boost_active = false
 	
-func add_to_inventory(item: InventoryItem):
+func collect(item: InventoryItem):
 	if inventory and inventory.has_method("collect"):
-		# Assuming your Inventory resource has a function called 'insert'
 		inventory.collect(item)
-	else:
-		# If you don't have an 'insert' function, we'll manually add it
-		# depending on how your Inventory resource is structured.
-		print("Item received, but Inventory resource needs an insert function!")

@@ -3,5 +3,6 @@ extends Area2D
 @export var itemRes: InventoryItem
 
 func collect(inventory: Inventory, player = null):
-	inventory.insert_into_inventory(itemRes)
-	queue_free()
+	if inventory.has_method("collect"):
+		inventory.collect(itemRes)
+		queue_free()

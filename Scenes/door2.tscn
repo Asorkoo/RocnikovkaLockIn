@@ -12,6 +12,7 @@ size = Vector2(16, 8)
 size = Vector2(16, 22)
 
 [node name="Door" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_4byyg")
 req_item = ExtResource("2_4byyg")
 

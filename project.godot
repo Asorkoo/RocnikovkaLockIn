@@ -15,6 +15,13 @@ run/main_scene="uid://4vsgtpjvo884"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[debug]
+
+shapes/navigation/3d/enable_agent_paths=false
+shapes/navigation/3d/enable_agent_paths_xray=false
+shapes/navigation/3d/agent_path_point_size=0.01
+shapes/navigation/2d/enable_agent_paths=false
+
 [display]
 
 window/size/viewport_width=1920

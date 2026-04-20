@@ -13,6 +13,7 @@ size = Vector2(16, 22)
 
 [node name="class_door" type="Node2D"]
 y_sort_enabled = true
+position = Vector2(0, -5)
 script = ExtResource("1_dyyst")
 req_item = ExtResource("2_jsrgt")
 

@@ -13,7 +13,6 @@ func _ready():
 	label.visible = false
 
 func _on_body_entered(body):
-
 	if unlocked:
 		return
 	
