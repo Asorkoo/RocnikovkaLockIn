@@ -9,14 +9,16 @@
 size = Vector2(16, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t37yo"]
-size = Vector2(16, 22)
+size = Vector2(26, 28)
 
 [node name="class_door2" type="Node2D"]
-position = Vector2(0, -4)
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_t37yo")
 req_item = ExtResource("2_gwo4n")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 y_sort_enabled = true
@@ -24,8 +26,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_8qv4s")
 
 [node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+y_sort_enabled = true
 shape = SubResource("RectangleShape2D_t37yo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

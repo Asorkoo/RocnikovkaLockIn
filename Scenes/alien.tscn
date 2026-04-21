@@ -78,7 +78,8 @@ radius = 14.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhrgm"]
 size = Vector2(30, 20)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["alien"]]
+z_index = 1
 y_sort_enabled = true
 script = ExtResource("1_fhrgm")
 detection_radius = 850.0

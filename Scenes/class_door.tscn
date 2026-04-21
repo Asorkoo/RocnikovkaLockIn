@@ -9,15 +9,17 @@
 size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm2ha"]
-size = Vector2(16, 22)
+size = Vector2(26, 30)
 
 [node name="class_door" type="Node2D"]
+z_index = 1
 y_sort_enabled = true
 position = Vector2(0, -5)
 script = ExtResource("1_dyyst")
 req_item = ExtResource("2_jsrgt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 2
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -32,6 +34,7 @@ y_sort_enabled = true
 shape = SubResource("RectangleShape2D_pm2ha")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
 y_sort_enabled = true
 texture = ExtResource("1_6kqg0")
 hframes = 2

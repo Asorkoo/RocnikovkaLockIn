@@ -18,79 +18,80 @@ script = ExtResource("1_rgj8m")
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
 z_index = 2
-position = Vector2(-1244, 298)
+position = Vector2(-925.99976, 118.00009)
 scale = Vector2(2.5, 2.5)
 movement_speed = 180.0
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(1.75, 1.75)
+metadata/_edit_lock_ = true
 
 [node name="Fake_Teachs" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="fake_teach" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(961, 754)
+position = Vector2(1039.9999, 917)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach2" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(167, 986)
+position = Vector2(154, 1028.9999)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach3" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-905, 929)
+position = Vector2(-1104, 845)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach4" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-934, 504)
+position = Vector2(-1211, 452)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach6" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-1015, -339)
+position = Vector2(-1203, -349)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach7" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-379, -267)
+position = Vector2(-357, -342)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach8" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(200, -250)
+position = Vector2(189, -348)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach9" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(1599, -390)
+position = Vector2(1605, -344)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach10" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2167, -386)
+position = Vector2(2177.0002, -338)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach11" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2986, -398)
+position = Vector2(2802.0002, -394.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach12" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2945, 165)
+position = Vector2(2862.0002, 143)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach13" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(3068, 489)
+position = Vector2(2846.0002, 478)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach14" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2770, 946)
+position = Vector2(2823, 845.99994)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach15" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
@@ -100,12 +101,12 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach16" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(1989, 1012)
+position = Vector2(2023.0001, 944.00006)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach17" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(1608, 1025)
+position = Vector2(1652, 937)
 scale = Vector2(2.5, 2.5)
 
 [node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
@@ -120,14 +121,15 @@ scale = Vector2(2.5, 2.5)
 
 [node name="bazilisek" parent="." instance=ExtResource("9_5dgvu")]
 z_index = 2
-position = Vector2(-444, 429.0001)
+position = Vector2(-436, 370.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
+metadata/_edit_lock_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="inventory_gui" parent="CanvasLayer" instance=ExtResource("3_6h5vk")]
+[node name="inventory_gui" parent="UI" instance=ExtResource("3_6h5vk")]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_right = 0.0
@@ -137,7 +139,7 @@ offset_right = 100.0
 offset_bottom = 290.0
 grow_horizontal = 1
 
-[node name="exit" type="Button" parent="CanvasLayer"]
+[node name="exit" type="Button" parent="UI"]
 offset_right = 64.0
 offset_bottom = 64.0
 theme_override_constants/outline_size = 1
@@ -145,19 +147,19 @@ theme_override_fonts/font = ExtResource("5_1ixah")
 theme_override_font_sizes/font_size = 24
 text = "Exit"
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="UI"]
 offset_left = 1776.0
 offset_right = 1904.0
 offset_bottom = 128.0
 texture = ExtResource("5_5dgvu")
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect2" type="TextureRect" parent="UI"]
 offset_left = 1632.0
 offset_right = 1760.0
 offset_bottom = 128.0
 texture = ExtResource("5_5dgvu")
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect3" type="TextureRect" parent="UI"]
 offset_left = 1488.0
 offset_right = 1616.0
 offset_bottom = 128.0
@@ -167,7 +169,7 @@ texture = ExtResource("5_5dgvu")
 
 [node name="teacher2" parent="." instance=ExtResource("2_2fmhe")]
 z_index = 2
-position = Vector2(-1003, 78)
+position = Vector2(-1183, 36.00001)
 scale = Vector2(2.5, 2.5)
 
-[connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/exit" to="." method="_on_button_pressed"]

@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var movement_speed: float = 180
 @export var boost_speed: float = 50
 @export var boost_time: float = 3.0
-@export var max_health: int = 3
+@export var max_health: int = 6
 @export var player_knock_strength: float = 250
 @export var death_ui: CanvasLayer
 @onready var inventory: Inventory = load("res://inventory/player_inventory.tres")
@@ -11,20 +11,20 @@ extends CharacterBody2D
 
 
 @onready var hearts = [
-	$"../CanvasLayer/TextureRect",
-	$"../CanvasLayer/TextureRect2",
-	$"../CanvasLayer/TextureRect3"
+	$"../UI/TextureRect",
+	$"../UI/TextureRect2",
+	$"../UI/TextureRect3"
 ]
 
 var character_direction : Vector2
 var boost_active := false
-var health: int = 3
+var health: int = 6
 var player_knock_velocity: Vector2 = Vector2.ZERO
 var spawn_position: Vector2
 
 func update_hearts():
 	for i in range(hearts.size()):
-		hearts[i].visible = i < health
+		hearts[i].visible = (i + 1) <= ceil(health / 2.0)
 
 func take_damage(from_position: Vector2):
 	var knock_direction = (global_position - from_position).normalized()

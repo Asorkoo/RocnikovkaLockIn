@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvuvfe22iixdu"]
+[gd_scene load_steps=12 format=3 uid="uid://bvuvfe22iixdu"]
 
 [ext_resource type="Script" uid="uid://1vcu3w31v18o" path="res://Scripts/map/busss.gd" id="1_v8fvo"]
-[ext_resource type="Texture2D" uid="uid://cm6sv6wldh68a" path="res://Assets/sprites/map/bus2.png" id="2_gysv0"]
+[ext_resource type="Resource" uid="uid://cenmbtjpt2hq" path="res://inventory/collactables/items_png/bus_keys.tres" id="2_3ivl3"]
+[ext_resource type="Texture2D" uid="uid://cm6sv6wldh68a" path="res://Assets/sprites/map/bus/bus2.png" id="2_gysv0"]
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="3_3ivl3"]
-[ext_resource type="Texture2D" uid="uid://b33tdu1a2hwjw" path="res://Assets/sprites/map/bus1.png" id="3_gysv0"]
+[ext_resource type="Texture2D" uid="uid://b33tdu1a2hwjw" path="res://Assets/sprites/map/bus/bus1.png" id="3_gysv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5w2b"]
 size = Vector2(168, 84)
@@ -63,19 +64,25 @@ outline_color = Color(0, 0, 0, 1)
 shadow_size = 2
 shadow_color = Color(0, 0, 0, 0.906)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ivl3"]
+size = Vector2(126, 24)
+
 [node name="bus" type="Node2D"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(1440, 1530)
 script = ExtResource("1_v8fvo")
+req_item = ExtResource("2_3ivl3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 2
-y_sort_enabled = true
+z_index = 1
 texture = ExtResource("3_gysv0")
 
 [node name="Area2D" type="Area2D" parent="."]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-z_index = -1
+z_index = 1
 y_sort_enabled = true
 shape = SubResource("RectangleShape2D_c5w2b")
 
@@ -86,6 +93,8 @@ libraries = {
 }
 
 [node name="Label" type="Label" parent="."]
+visible = false
+z_index = 5
 offset_left = -61.0
 offset_top = -42.0
 offset_right = 70.0
@@ -93,9 +102,28 @@ offset_bottom = -19.0
 text = "Press E to drive away"
 label_settings = SubResource("LabelSettings_q73dt")
 
+[node name="Label2" type="Label" parent="."]
+visible = false
+z_index = 5
+offset_left = -61.0
+offset_top = -42.0
+offset_right = 70.0
+offset_bottom = -19.0
+text = "No bus keys, keep looking"
+label_settings = SubResource("LabelSettings_q73dt")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
 zoom = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_3ivl3")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

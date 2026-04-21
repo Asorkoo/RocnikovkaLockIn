@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://3hjse2qecjav"]
+
+[ext_resource type="Script" uid="uid://bkfg8uvmfro1p" path="res://inventory/collactables/items_scenes/key_2.gd" id="1_6fj4j"]
+[ext_resource type="Texture2D" uid="uid://yisg772nu1dp" path="res://inventory/collactables/items_png/key2.png" id="1_7688o"]
+[ext_resource type="Resource" uid="uid://dk4fro0m68ife" path="res://inventory/collactables/items_png/key2.tres" id="2_ir0ax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fj4j"]
+size = Vector2(16, 6)
+
+[node name="Area2D" type="Area2D"]
+rotation = -0.7853982
+script = ExtResource("1_6fj4j")
+itemRes = ExtResource("2_ir0ax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6fj4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7688o")

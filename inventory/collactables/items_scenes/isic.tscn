@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5jwnj0x5crbn"]
+[gd_scene load_steps=5 format=3 uid="uid://c5jwnj0x5crbn"]
 
 [ext_resource type="Texture2D" uid="uid://bddvadtuphkkj" path="res://inventory/collactables/items_png/char_isic.png" id="1_rtsun"]
 [ext_resource type="Script" uid="uid://dwlnvovmwojol" path="res://inventory/collactables/items_scenes/isic.gd" id="1_xholo"]
+[ext_resource type="Resource" uid="uid://d0rgnoykqr0ud" path="res://inventory/collactables/items_png/isic.tres" id="2_k2jsh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xholo"]
 size = Vector2(16, 10)
 
 [node name="isic" type="Area2D"]
 script = ExtResource("1_xholo")
+itemRes = ExtResource("2_k2jsh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xholo")

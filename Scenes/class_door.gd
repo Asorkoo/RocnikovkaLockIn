@@ -6,11 +6,13 @@ extends Node2D
 @onready var blocker: StaticBody2D = $StaticBody2D
 @onready var label: Label = $Label
 @onready var label2: Label = $Label2
+
 var unlocked := false
 
 func _ready():
 	sprite.frame = 0
 	label.visible = false
+	label2.visible = false
 
 func has_key() -> bool:
 	for item in inventory.items:
@@ -28,14 +30,20 @@ func show_label():
 	label.visible = true
 	await get_tree().create_timer(1.0).timeout
 	label.visible = false
-
-
+	
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	var areyouaplayer = body.is_in_group("player")
+	
 	if unlocked:
 		return
-	
-	if !has_key():
-		label2.visible = true
-
-	if has_key():
+		
+	if areyouaplayer and has_key():
 		unlock_door()
+	elif body.is_in_group("alien"):
+		unlock_door()
+		label2.visible = false
+		label.visible = false
+	
+	if areyouaplayer and !unlocked:
+		if !has_key():
+			label2.visible = true
