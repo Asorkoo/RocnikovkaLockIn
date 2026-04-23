@@ -15,6 +15,10 @@ run/main_scene="uid://4vsgtpjvo884"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalMusic="*res://Scenes/global_music.tscn"
+
 [debug]
 
 shapes/navigation/3d/enable_agent_paths=false

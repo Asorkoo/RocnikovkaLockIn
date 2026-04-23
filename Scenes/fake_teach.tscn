@@ -114,6 +114,7 @@ size = Vector2(26.08696, 20)
 [node name="fake_teach" type="CharacterBody2D" groups=["alien"]]
 z_index = 1
 y_sort_enabled = true
+position = Vector2(0, -4)
 script = ExtResource("1_nui3g")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]

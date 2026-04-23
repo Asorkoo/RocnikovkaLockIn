@@ -1,12 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://ecdj7jmsghys"]
+[gd_scene load_steps=15 format=3 uid="uid://ecdj7jmsghys"]
 
 [ext_resource type="Script" uid="uid://dmpe3354gjjiy" path="res://Scenes/game_scene.gd" id="1_rgj8m"]
 [ext_resource type="PackedScene" uid="uid://dtiqtbjua4wjs" path="res://Scenes/player.tscn" id="1_x87qo"]
 [ext_resource type="PackedScene" uid="uid://nxybqfmhsoak" path="res://Scenes/teach.tscn" id="2_2fmhe"]
 [ext_resource type="PackedScene" uid="uid://bdnev6hplrwbs" path="res://Scenes/inventory_gui.tscn" id="3_6h5vk"]
+[ext_resource type="PackedScene" uid="uid://eg0mx6o3dhos" path="res://Scenes/gyall.tscn" id="4_4xiap"]
 [ext_resource type="PackedScene" uid="uid://chaqxeujftfgc" path="res://map.tscn" id="4_fiftr"]
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="5_1ixah"]
 [ext_resource type="Texture2D" uid="uid://bwwtaoch6d0bv" path="res://Assets/sprites/ui/heart/heart.png" id="5_5dgvu"]
+[ext_resource type="PackedScene" uid="uid://cat6j5vh3sr4c" path="res://Scenes/listonoz.tscn" id="5_ldntv"]
+[ext_resource type="PackedScene" uid="uid://pxhmu62t5ae4" path="res://Scenes/kiaboi.tscn" id="6_w8jfd"]
 [ext_resource type="PackedScene" uid="uid://d2jccem8xp1k7" path="res://Scenes/alien.tscn" id="8_7iton"]
 [ext_resource type="PackedScene" uid="uid://dkveh2tk74oga" path="res://Scenes/bazilisek.tscn" id="9_5dgvu"]
 [ext_resource type="PackedScene" uid="uid://drqorjqqbe2hi" path="res://Scenes/fake_teach.tscn" id="9_ikfsv"]
@@ -18,7 +21,7 @@ script = ExtResource("1_rgj8m")
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
 z_index = 2
-position = Vector2(-925.99976, 118.00009)
+position = Vector2(-925, 298)
 scale = Vector2(2.5, 2.5)
 movement_speed = 180.0
 
@@ -36,7 +39,7 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach2" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(154, 1028.9999)
+position = Vector2(181.00002, 1003.00006)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach3" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
@@ -46,7 +49,7 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach4" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-1211, 452)
+position = Vector2(-945, 455)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach6" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
@@ -56,37 +59,37 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach7" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-357, -342)
+position = Vector2(-418.00003, -337)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach8" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(189, -348)
+position = Vector2(237.00002, -320.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach9" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(1605, -344)
+position = Vector2(1814, -339.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach10" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2177.0002, -338)
+position = Vector2(2210, -302.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach11" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2802.0002, -394.00003)
+position = Vector2(3031, -431)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach12" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2862.0002, 143)
+position = Vector2(2886, 154.00002)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach13" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2846.0002, 478)
+position = Vector2(2903, 475.99997)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach14" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
@@ -96,32 +99,411 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach15" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2322, 928)
+position = Vector2(2274, 913)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach16" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2023.0001, 944.00006)
+position = Vector2(2011.0001, 1027)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach17" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(1652, 937)
+position = Vector2(1612.0001, 1000.00006)
 scale = Vector2(2.5, 2.5)
 
-[node name="teacher" parent="." instance=ExtResource("2_2fmhe")]
+[node name="CharacterBody2D" parent="Fake_Teachs" instance=ExtResource("8_7iton")]
+z_index = 2
+position = Vector2(1723, 171)
+scale = Vector2(2.5, 2.5)
+detection_radius = 800.0
+
+[node name="CharacterBody2D2" parent="Fake_Teachs" instance=ExtResource("8_7iton")]
+z_index = 2
+position = Vector2(1910.0001, 173.00002)
+scale = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D3" parent="Fake_Teachs" instance=ExtResource("8_7iton")]
+z_index = 2
+position = Vector2(896, 1569)
+scale = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D4" parent="Fake_Teachs" instance=ExtResource("8_7iton")]
+z_index = 2
+position = Vector2(1027, 1492)
+scale = Vector2(2.5, 2.5)
+
+[node name="actors" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="gyall" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(-996, 586)
+scale = Vector2(-1, 1)
+
+[node name="listonoz" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(-1027, 492)
+
+[node name="kiaboi" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(-1188, 586)
+
+[node name="kiaboi2" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(-1171, 242)
+
+[node name="kiaboi3" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(-1108, 190)
+
+[node name="kiaboi4" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(-1076, 190)
+scale = Vector2(-1, 1)
+
+[node name="gyall2" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(-997, -180)
+scale = Vector2(-1, 1)
+
+[node name="gyall3" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(-1028, -180)
+
+[node name="gyall4" parent="actors" instance=ExtResource("4_4xiap")]
+z_index = 0
+position = Vector2(-1126, -369)
+
+[node name="gyall5" parent="actors" instance=ExtResource("4_4xiap")]
+z_index = 0
+position = Vector2(-998, -228)
+
+[node name="kiaboi5" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(-1089, -128)
+
+[node name="kiaboi6" parent="actors" instance=ExtResource("6_w8jfd")]
+z_index = 0
+position = Vector2(-924, -262)
+
+[node name="kiaboi7" parent="actors" instance=ExtResource("6_w8jfd")]
+z_index = 0
+position = Vector2(212, 548)
+
+[node name="kiaboi8" parent="actors" instance=ExtResource("6_w8jfd")]
+z_index = 0
+position = Vector2(253, 549)
+scale = Vector2(-1, 1)
+
+[node name="teacher2" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-1183, 37.00001)
+scale = Vector2(2.5, 2.5)
+
+[node name="gyall6" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(188, 93)
+
+[node name="gyall7" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(257, 91)
+scale = Vector2(-1, 1)
+
+[node name="gyall8" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(218, 114)
+
+[node name="gyall9" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(-599, -323)
+
+[node name="gyall10" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(-601, -292)
+
+[node name="listonoz2" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(-333, -291)
+
+[node name="kiaboi9" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1114, 9)
+
+[node name="kiaboi10" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1174, 10)
+
+[node name="listonoz3" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(1694, -401)
+scale = Vector2(-1, 1)
+
+[node name="listonoz4" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(1696, -369)
+scale = Vector2(-1, 1)
+
+[node name="listonoz5" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(1885, -306)
+scale = Vector2(-1, 1)
+
+[node name="CharacterBody2D" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(1570, -305)
+scale = Vector2(2.5, 2.5)
+
+[node name="listonoz6" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(2880, -193)
+
+[node name="kiaboi11" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2847, -198)
+
+[node name="kiaboi12" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2942, -194)
+
+[node name="kiaboi13" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2972, -192)
+
+[node name="listonoz7" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(3038, -244)
+
+[node name="gyall11" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(3071, -232)
+scale = Vector2(-1, 1)
+
+[node name="gyall12" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2846, -329)
+
+[node name="gyall13" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2877, -329)
+
+[node name="gyall14" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2973, -58)
+
+[node name="CharacterBody2D2" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(2996.0002, -65)
+scale = Vector2(-2.5, 2.5)
+
+[node name="listonoz8" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(2859, 603)
+
+[node name="listonoz9" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(2829, 605)
+
+[node name="listonoz10" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(2929, 607)
+
+[node name="listonoz11" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(2958, 605)
+scale = Vector2(-1, 1)
+
+[node name="listonoz12" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(3024, 555)
+
+[node name="listonoz13" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(3052, 554)
+scale = Vector2(-1, 1)
+
+[node name="gyall15" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2858, 917)
+
+[node name="gyall16" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2911, 1016)
+
+[node name="gyall17" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2943, 972)
+
+[node name="kiaboi14" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2621, 1073)
+scale = Vector2(-1, 1)
+
+[node name="kiaboi15" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2622, 1039)
+scale = Vector2(-1, 1)
+
+[node name="kiaboi16" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1893, 1074)
+
+[node name="kiaboi17" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1892, 1039)
+
+[node name="kiaboi18" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2114, 1096)
+
+[node name="CharacterBody2D3" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(2309, 1088)
+scale = Vector2(2.5, 2.5)
+
+[node name="gyall18" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2257, 1018)
+
+[node name="listonoz14" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(1000, 658)
+
+[node name="gyall19" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(1215, 675)
+
+[node name="gyall20" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(1253, 658)
+scale = Vector2(-1, 1)
+
+[node name="gyall21" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(63, 988)
+scale = Vector2(-1, 1)
+
+[node name="gyall22" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(-32, 990)
+
+[node name="gyall23" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(-1045, 1007)
+
+[node name="listonoz15" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(-996, 990)
+scale = Vector2(-1, 1)
+
+[node name="listonoz16" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(-712, 705)
+
+[node name="CharacterBody2D4" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-712.00006, 350)
+scale = Vector2(2.5, 2.5)
+
+[node name="kiaboi19" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(-508, -93)
+
+[node name="gyall24" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(241, -111)
+
+[node name="gyall25" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(716, 22)
+
+[node name="kiaboi20" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(504, 350)
+
+[node name="kiaboi21" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(528, 410)
+
+[node name="kiaboi22" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1157, 295)
+scale = Vector2(-1, 1)
+
+[node name="kiaboi23" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(727, 286)
+
+[node name="kiaboi24" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1025, 384)
+scale = Vector2(-1, 1)
+
+[node name="kiaboi25" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1195, 439)
+scale = Vector2(-1, 1)
+
+[node name="kiaboi26" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1260, 320)
+scale = Vector2(-1, 1)
+
+[node name="kiaboi27" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(727, 416)
+
+[node name="kiaboi28" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(828, 342)
+
+[node name="kiaboi29" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(1039, 471)
+scale = Vector2(-1, 1)
+
+[node name="CharacterBody2D5" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(898, 565)
+scale = Vector2(2, 2)
+
+[node name="listonoz17" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(103, 629)
+
+[node name="listonoz18" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(202, 629)
+scale = Vector2(-1, 1)
+
+[node name="gyall26" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2256, 196)
+
+[node name="gyall27" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2353, 196)
+scale = Vector2(-1, 1)
+
+[node name="kiaboi30" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2319, -5)
+
+[node name="kiaboi31" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2193, -4)
+
+[node name="kiaboi32" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(2351, -5)
+
+[node name="CharacterBody2D6" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(2385.0002, 169)
+scale = Vector2(-2.5, 2.5)
+
+[node name="gyall28" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2367, 285)
+
+[node name="gyall29" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(2417, 299)
+scale = Vector2(-1, 1)
+
+[node name="gyall30" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(135, 70)
+
+[node name="gyall31" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(200, 69)
+
+[node name="gyall32" parent="actors" instance=ExtResource("4_4xiap")]
+position = Vector2(137, 260)
+
+[node name="kiaboi33" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(164, 628)
+
+[node name="kiaboi34" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(226, 627)
+
+[node name="kiaboi35" parent="actors" instance=ExtResource("6_w8jfd")]
+position = Vector2(40, 438)
+
+[node name="listonoz19" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(164, 438)
+
+[node name="CharacterBody2D7" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-403, 374)
+scale = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D8" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-347.00003, 477)
+scale = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D9" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-342, 375.00003)
+scale = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D10" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-281.00003, 375.00003)
+scale = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D11" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-559, 374)
+scale = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D12" parent="actors" instance=ExtResource("2_2fmhe")]
+z_index = 2
+position = Vector2(-529, 375)
+scale = Vector2(2.5, 2.5)
+
+[node name="listonoz20" parent="actors" instance=ExtResource("5_ldntv")]
+position = Vector2(1759, 1696)
+
+[node name="teacher" parent="actors" instance=ExtResource("2_2fmhe")]
 z_index = 2
 position = Vector2(719, 919)
+scale = Vector2(2.5, 2.5)
+
+[node name="bazilisek" parent="actors" instance=ExtResource("9_5dgvu")]
+z_index = 2
+position = Vector2(-461, 366)
 scale = Vector2(2.5, 2.5)
 
 [node name="alien" parent="." instance=ExtResource("8_7iton")]
 z_index = 2
 position = Vector2(1541, 768.00006)
-scale = Vector2(2.5, 2.5)
-
-[node name="bazilisek" parent="." instance=ExtResource("9_5dgvu")]
-z_index = 2
-position = Vector2(-436, 370.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="map" parent="." instance=ExtResource("4_fiftr")]
@@ -166,10 +548,5 @@ offset_bottom = 128.0
 texture = ExtResource("5_5dgvu")
 
 [node name="DeathScreen" parent="." instance=ExtResource("11_uscyt")]
-
-[node name="teacher2" parent="." instance=ExtResource("2_2fmhe")]
-z_index = 2
-position = Vector2(-1183, 36.00001)
-scale = Vector2(2.5, 2.5)
 
 [connection signal="pressed" from="UI/exit" to="." method="_on_button_pressed"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://eg0mx6o3dhos"]
+
+[ext_resource type="Texture2D" uid="uid://tt4iodhjab2e" path="res://Assets/sprites/people/sheets/student_gyall.png" id="1_kgwiy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv1f7"]
+atlas = ExtResource("1_kgwiy")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88m3q"]
+atlas = ExtResource("1_kgwiy")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4rjv"]
+atlas = ExtResource("1_kgwiy")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wue8j"]
+atlas = ExtResource("1_kgwiy")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48xf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv1f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88m3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4rjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wue8j")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_880oh"]
+size = Vector2(13.011999, 3.2399995)
+
+[node name="gyall" type="CharacterBody2D"]
+z_index = 2
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.0000076, -12.000008)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_48xf7")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.98238516
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.99999994, 6)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_880oh")

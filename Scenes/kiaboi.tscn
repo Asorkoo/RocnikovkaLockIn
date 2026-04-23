@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://pxhmu62t5ae4"]
+
+[ext_resource type="Texture2D" uid="uid://d27rnvg8hx6dn" path="res://Assets/sprites/people/sheets/student_kiabois.png" id="1_ad7be"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_synn7"]
+atlas = ExtResource("1_ad7be")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufewe"]
+atlas = ExtResource("1_ad7be")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myatj"]
+atlas = ExtResource("1_ad7be")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3j3t"]
+atlas = ExtResource("1_ad7be")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6cup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_synn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufewe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myatj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3j3t")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltrwi"]
+size = Vector2(13, 4)
+
+[node name="kiaboi" type="CharacterBody2D"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-1, -12)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_n6cup")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.36219832
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.2500006, 17.5)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_ltrwi")

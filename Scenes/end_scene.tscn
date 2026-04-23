@@ -1,9 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsl0ixrvpuyc4"]
+[gd_scene load_steps=4 format=3 uid="uid://bsl0ixrvpuyc4"]
 
 [ext_resource type="Texture2D" uid="uid://c4qp5fsuckvo3" path="res://Assets/sprites/map/end_screen.jpeg" id="1_5pkqa"]
+[ext_resource type="Script" uid="uid://b02xgm6dwku0a" path="res://Scenes/end_scene.gd" id="1_fgb5u"]
+[ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="2_5rked"]
 
 [node name="End" type="Node2D"]
+script = ExtResource("1_fgb5u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("1_5pkqa")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(0.8346143, 0.8346143, 0.8346143, 1)
+offset_left = 832.0
+offset_top = 512.0
+offset_right = 1088.0
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.60784316, 0.4392157, 0.44705883, 1)
+theme_override_colors/font_hover_color = Color(0.35531327, 0.3553136, 0.3553143, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_5rked")
+theme_override_font_sizes/font_size = 128
+text = "End"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

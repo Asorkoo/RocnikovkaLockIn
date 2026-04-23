@@ -112,6 +112,13 @@ func speedboost_apply():
 	movement_speed -= boost_speed
 	boost_active = false
 	
+func health_regen():
+	if health == max_health:
+		return
+	else:
+		health += 2	
+		update_hearts()
+
 func collect(item: InventoryItem):
 	if inventory and inventory.has_method("collect"):
 		inventory.collect(item)

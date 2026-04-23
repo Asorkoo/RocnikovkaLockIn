@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06358vbm43da"]
+
+[ext_resource type="AudioStream" uid="uid://dc03ql1n6vigi" path="res://Sounds/Uzi ft. Quavo - Go All Tha Way.mp3" id="1_jmqbo"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_jmqbo")
+autoplay = true
+bus = &"Music"
+parameters/looping = true

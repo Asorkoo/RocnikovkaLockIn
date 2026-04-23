@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://x16mq6fxms5r" path="res://ByteBounce.ttf" id="1_28flt"]
 [ext_resource type="Script" uid="uid://db0rg44usfk2" path="res://Scripts/ui/main_menu.gd" id="1_48xlc"]
-[ext_resource type="AudioStream" uid="uid://dc03ql1n6vigi" path="res://Sounds/Uzi ft. Quavo - Go All Tha Way.mp3" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://biipyjo254x7v" path="res://Assets/sprites/map/hello.png" id="4_ce3w2"]
 
 [node name="mainMenu" type="Node2D"]
 position = Vector2(960, 552)
@@ -15,19 +15,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Start" type="Button" parent="buttonManager"]
+[node name="Start3" type="Button" parent="buttonManager"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -93.5
-offset_top = -168.0
-offset_right = 93.5
-offset_bottom = -90.0
+anchors_preset = -1
+anchor_left = -2.4
+anchor_top = -4.2
+anchor_bottom = -3.4
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 theme_override_colors/font_pressed_color = Color(0.44705883, 0.44705883, 0.44705883, 1)
 theme_override_colors/font_hover_color = Color(0.60784316, 0.4392157, 0.44705883, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -35,21 +31,18 @@ theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_font_sizes/font_size = 32
 text = "Start"
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Options" type="Button" parent="buttonManager"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = -61.0
-offset_right = 92.0
-offset_bottom = 11.0
+anchors_preset = -1
+anchor_left = -2.4
+anchor_top = -1.0
+anchor_bottom = -0.2
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 theme_override_colors/font_pressed_color = Color(0.44705883, 0.44705883, 0.44705883, 1)
 theme_override_colors/font_hover_color = Color(0.60784316, 0.4392157, 0.44705883, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -57,21 +50,37 @@ theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_font_sizes/font_size = 32
 text = "Options"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Options2" type="Button" parent="buttonManager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.4
+anchor_top = 2.2
+anchor_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_colors/font_pressed_color = Color(0.44705883, 0.44705883, 0.44705883, 1)
+theme_override_colors/font_hover_color = Color(0.60784316, 0.4392157, 0.44705883, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 32
+text = "What"
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Exit" type="Button" parent="buttonManager"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -93.5
-offset_top = 49.0
-offset_right = 93.5
-offset_bottom = 128.0
+anchors_preset = -1
+anchor_left = -2.4
+anchor_top = 5.4
+anchor_bottom = 6.2
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 theme_override_colors/font_pressed_color = Color(0.446777, 0.44677705, 0.44677693, 1)
 theme_override_colors/font_hover_color = Color(0.60623616, 0.43992993, 0.4488892, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -79,13 +88,25 @@ theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_font_sizes/font_size = 32
 text = "Exit"
+flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="UziFt_QuavoGoAllThaWay" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_1ehe0")
-volume_db = -10.0
-autoplay = true
+[node name="Secret_Start" type="Button" parent="buttonManager"]
+z_index = -1
+layout_mode = 0
+offset_left = 512.0
+offset_top = -402.0
+offset_right = 897.0
+offset_bottom = -189.0
 
-[connection signal="pressed" from="buttonManager/Start" to="." method="_on_start_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -12.00005)
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("4_ce3w2")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="buttonManager/Start3" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="buttonManager/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="buttonManager/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="buttonManager/Secret_Start" to="." method="_on_secret_start_pressed"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cat6j5vh3sr4c"]
+
+[ext_resource type="Texture2D" uid="uid://c6ijvuulhp8y6" path="res://Assets/sprites/people/sheets/student_listonoz.png" id="1_3lpkk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jicij"]
+atlas = ExtResource("1_3lpkk")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ibsl"]
+atlas = ExtResource("1_3lpkk")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbut4"]
+atlas = ExtResource("1_3lpkk")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi0ff"]
+atlas = ExtResource("1_3lpkk")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2pbt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jicij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ibsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbut4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi0ff")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p765"]
+size = Vector2(12.5, 4)
+
+[node name="listonoz" type="CharacterBody2D"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-0.99999994, -10.000002)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4.7683713e-08, 0)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_b2pbt")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.2578843
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 18)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_6p765")
