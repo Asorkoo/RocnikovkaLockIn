@@ -27,8 +27,9 @@ func update_hearts():
 		hearts[i].visible = (i + 1) <= ceil(health / 2.0)
 
 func take_damage(from_position: Vector2):
-	var knock_direction = (global_position - from_position).normalized()
-	player_knock_velocity = knock_direction * player_knock_strength
+	if health >= 1:
+		var knock_direction = (global_position - from_position).normalized()
+		player_knock_velocity = knock_direction * player_knock_strength
 
 	if health <= 0:
 		return
@@ -39,33 +40,25 @@ func take_damage(from_position: Vector2):
 		die()
 		
 func die():
-	if not is_physics_processing(): 
-		return
-	health = max_health
-	if has_method("update_hearts"):
-		update_hearts()
+	set_physics_process(false)
 
 	var death_screen = get_tree().get_first_node_in_group("death_screen")
 	if death_screen:
-		set_physics_process(false) 
 		death_screen.show_death_screen()
-
 		await get_tree().create_timer(2.0).timeout
-		
-		global_position = spawn_position
-		velocity = Vector2.ZERO
-		health = max_health
-		get_tree().call_group("enemies", "reset_scene")
-		update_hearts()
-		
+
+	global_position = spawn_position
+	velocity = Vector2.ZERO
+	health = max_health
+	get_tree().call_group("enemies", "reset_scene")
+	update_hearts()
+	
+	if death_screen:
 		await get_tree().create_timer(0.5).timeout
 		death_screen.hide_death_screen()
-		set_physics_process(true)
-	else:
-		global_position = spawn_position
-		health = max_health
-		update_hearts()
-	
+		
+	set_physics_process(true)
+
 func movement(_delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
 	character_direction.y = Input.get_axis("move_up", "move_down")

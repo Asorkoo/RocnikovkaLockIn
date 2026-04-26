@@ -174,10 +174,6 @@ position = Vector2(-998, -228)
 [node name="kiaboi5" parent="actors" instance=ExtResource("6_w8jfd")]
 position = Vector2(-1089, -128)
 
-[node name="kiaboi6" parent="actors" instance=ExtResource("6_w8jfd")]
-z_index = 0
-position = Vector2(-924, -262)
-
 [node name="kiaboi7" parent="actors" instance=ExtResource("6_w8jfd")]
 z_index = 0
 position = Vector2(212, 548)
