@@ -9,7 +9,7 @@
 size = Vector2(16, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwo4n"]
-size = Vector2(2, 8)
+size = Vector2(2, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t37yo"]
 size = Vector2(26, 28)
@@ -23,6 +23,7 @@ req_item = ExtResource("2_gwo4n")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 y_sort_enabled = true
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_8qv4s")
@@ -30,11 +31,12 @@ shape = SubResource("RectangleShape2D_8qv4s")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(7, 4)
+position = Vector2(7, 5.5)
 shape = SubResource("RectangleShape2D_gwo4n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-7, 4)
+z_index = 2
+position = Vector2(-7, 5.5)
 shape = SubResource("RectangleShape2D_gwo4n")
 
 [node name="Area2D" type="Area2D" parent="."]

@@ -39,37 +39,37 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach2" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(181.00002, 1003.00006)
+position = Vector2(198, 1000)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach3" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-1104, 845)
+position = Vector2(-929.0001, 888)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach4" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-945, 455)
+position = Vector2(-945, 491)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach6" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-1203, -349)
+position = Vector2(-953.0001, -318)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach7" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(-418.00003, -337)
+position = Vector2(-422, -285)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach8" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(237.00002, -320.00003)
+position = Vector2(189, -276)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach9" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(1814, -339.00003)
+position = Vector2(1724.0001, -351)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach10" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
@@ -79,7 +79,7 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach11" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(3031, -431)
+position = Vector2(2927, -397.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach12" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
@@ -94,7 +94,7 @@ scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach14" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
 z_index = 2
-position = Vector2(2823, 845.99994)
+position = Vector2(2827.0002, 861)
 scale = Vector2(2.5, 2.5)
 
 [node name="fake_teach15" parent="Fake_Teachs" instance=ExtResource("9_ikfsv")]
@@ -185,7 +185,7 @@ scale = Vector2(-1, 1)
 
 [node name="teacher2" parent="actors" instance=ExtResource("2_2fmhe")]
 z_index = 2
-position = Vector2(-1183, 37.00001)
+position = Vector2(-1127.0001, 53.000004)
 scale = Vector2(2.5, 2.5)
 
 [node name="gyall6" parent="actors" instance=ExtResource("4_4xiap")]
@@ -311,7 +311,7 @@ position = Vector2(2114, 1096)
 
 [node name="CharacterBody2D3" parent="actors" instance=ExtResource("2_2fmhe")]
 z_index = 2
-position = Vector2(2309, 1088)
+position = Vector2(2304, 1096.0001)
 scale = Vector2(2.5, 2.5)
 
 [node name="gyall18" parent="actors" instance=ExtResource("4_4xiap")]
@@ -524,6 +524,7 @@ theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("5_1ixah")
 theme_override_font_sizes/font_size = 24
 text = "Exit"
+flat = true
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
 offset_left = 1776.0

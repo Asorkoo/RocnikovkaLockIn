@@ -43,10 +43,9 @@ func movement(delta: float):
 		if not navigation.is_navigation_finished():
 			var next_hop = navigation.get_next_path_position()
 			var direction = (next_hop - global_position).normalized()
-		
 			velocity = direction * speed
+			
 			sprite.flip_h = direction.x < 0
-		
 			if sprite.animation != "Walking":
 				sprite.play("Walking")
 	else:

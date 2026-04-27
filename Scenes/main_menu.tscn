@@ -53,7 +53,7 @@ text = "Options"
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Options2" type="Button" parent="buttonManager"]
+[node name="what" type="Button" parent="buttonManager"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -2.4
@@ -94,10 +94,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Secret_Start" type="Button" parent="buttonManager"]
 z_index = -1
 layout_mode = 0
-offset_left = 512.0
-offset_top = -402.0
-offset_right = 897.0
-offset_bottom = -189.0
+offset_left = 552.0
+offset_top = -328.0
+offset_right = 784.0
+offset_bottom = -200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -108,5 +108,6 @@ metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="buttonManager/Start3" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="buttonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="buttonManager/what" to="." method="_on_what_pressed"]
 [connection signal="pressed" from="buttonManager/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="buttonManager/Secret_Start" to="." method="_on_secret_start_pressed"]

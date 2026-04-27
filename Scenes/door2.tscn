@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7jjmokmgxuev"]
+[gd_scene load_steps=8 format=3 uid="uid://c7jjmokmgxuev"]
 
 [ext_resource type="Script" uid="uid://c5dwt4mmkt6b0" path="res://Scripts/map/door2.gd" id="1_4byyg"]
 [ext_resource type="Resource" uid="uid://d0rgnoykqr0ud" path="res://inventory/collactables/items_png/isic.tres" id="2_4byyg"]
@@ -10,6 +10,9 @@ size = Vector2(16, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xgyta"]
 size = Vector2(16, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ey2b"]
+size = Vector2(1, 4.25)
 
 [node name="Door" type="Node2D"]
 y_sort_enabled = true
@@ -43,5 +46,15 @@ theme_override_fonts/font = ExtResource("4_xgyta")
 text = "Door Opened"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-7.5, 5.375)
+shape = SubResource("RectangleShape2D_5ey2b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(7.5, 5.375)
+shape = SubResource("RectangleShape2D_5ey2b")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

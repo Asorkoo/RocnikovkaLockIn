@@ -39,6 +39,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 	if areyouaplayer and has_key():
 		unlock_door()
+		
 	elif body.is_in_group("alien"):
 		unlock_door()
 		label2.visible = false
