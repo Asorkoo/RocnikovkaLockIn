@@ -76,30 +76,6 @@ offset_bottom = 19.136902
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer"]
-z_index = 10
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 1
-theme_override_fonts/font = ExtResource("2_lhmql")
-theme_override_font_sizes/font_size = 24
-selected = 2
-item_count = 3
-popup/item_0/text = "1920x1080"
-popup/item_0/id = 0
-popup/item_1/text = "1600x900"
-popup/item_1/id = 1
-popup/item_2/text = "1280x720"
-popup/item_2/id = 2
-
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Resolutions"]
-z_index = -2
-layout_mode = 0
-offset_right = 1408.0
-offset_bottom = 25.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
 [node name="mainMenu" type="Button" parent="MarginContainer/VBoxContainer"]
 z_index = 10
 layout_mode = 2
@@ -127,6 +103,5 @@ color = Color(0.17973158, 0, 0.010413719, 1)
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
-[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/mainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/mainMenu" to="." method="_on_button_toggled"]

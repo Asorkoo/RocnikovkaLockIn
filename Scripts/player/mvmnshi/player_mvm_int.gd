@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var death_ui: CanvasLayer
 @onready var inventory: Inventory = load("res://inventory/player_inventory.tres")
 @onready var sprite = %sprite
+@onready var walk_audio = $AudioStreamPlayer2D
 
 
 @onready var hearts = [
@@ -84,6 +85,7 @@ func _physics_process(_delta):
 
 	movement(_delta)
 	move_and_slide()
+	update_walking_sound()
 
 func _on_area_2d_area_entered(area):
 	if area.has_method("collect"):
@@ -115,3 +117,12 @@ func health_regen():
 func collect(item: InventoryItem):
 	if inventory and inventory.has_method("collect"):
 		inventory.collect(item)
+		
+func update_walking_sound():
+	if sprite.animation == "Walking":
+		if not walk_audio.playing:
+			walk_audio.play()
+			walk_audio.pitch_scale = randf_range(0.9, 1.1)
+	else:
+		if walk_audio.playing:
+			walk_audio.stop()

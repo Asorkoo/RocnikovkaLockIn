@@ -1,7 +1,23 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2jccem8xp1k7"]
+[gd_scene load_steps=18 format=3 uid="uid://d2jccem8xp1k7"]
 
 [ext_resource type="Script" uid="uid://d2q3hm3pagjxe" path="res://Scripts/alien.gd" id="1_fhrgm"]
 [ext_resource type="Texture2D" uid="uid://coadijxt7hwk3" path="res://Assets/sprites/alien/sheets/DinoSprites - doux.png" id="1_mdm8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjurw"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56v5a"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5brx0"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nhk8"]
+atlas = ExtResource("1_mdm8w")
+region = Rect2(264, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fhrgm"]
 atlas = ExtResource("1_mdm8w")
@@ -37,6 +53,23 @@ region = Rect2(120, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kjurw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjurw")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_56v5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5brx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nhk8")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 16.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fhrgm")
@@ -88,8 +121,9 @@ detection_radius = 850.0
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_kjurw")
-animation = &"Idle"
+animation = &"Attack"
 autoplay = "Idle"
+frame_progress = 0.37880582
 
 [node name="Area2D" type="Area2D" parent="."]
 

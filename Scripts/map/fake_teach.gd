@@ -12,6 +12,7 @@ var player: Node2D
 var chase: float = 0.0
 var path_calc_time := 0.0
 var can_attack := true
+var is_attacking:= false
 var player_in_range: Node2D = null
 var spawn_position: Vector2
 
@@ -54,6 +55,8 @@ func movement(delta: float):
 			if sprite.animation != "Walking":
 				sprite.play("Walking")
 		else:
+			if is_attacking:
+				return
 			if sprite.animation != "Walking_Alien":
 				sprite.play("Walking_Alien")
 	else:
@@ -64,6 +67,8 @@ func movement(delta: float):
 
 func attack():
 	if can_attack and player_in_range:
+		is_attacking = true
+		sprite.play("Attack")
 		if player_in_range.has_method("take_damage"):
 			player_in_range.take_damage(global_position)
 			start_cooldown()
@@ -77,7 +82,9 @@ func start_cooldown():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = body
+		is_attacking = true
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = null
+		is_attacking = false

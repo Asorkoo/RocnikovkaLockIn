@@ -57,6 +57,8 @@ func movement(delta: float):
 
 func attack():
 	if can_attack and player_in_range:
+		if sprite.animation != "Attack":
+			sprite.play("Attack")
 		if player_in_range.has_method("take_damage"):
 			player_in_range.take_damage(global_position)
 			start_cooldown()
